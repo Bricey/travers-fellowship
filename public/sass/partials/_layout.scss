@@ -1,0 +1,41 @@
+html {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body {
+  background: #fff; 
+  margin: 0 !important;
+  padding: 0 !important;
+
+  &.dis, &.dis-slideout {
+    overflow: hidden;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}  
+
+.inner {
+  width: 100%;
+  overflow: hidden;
+}
+
+p,div {
+  margin: 0;
+  padding: 0;
+}
+
+.vc {
+  display: flex;
+  align-items: center;
+}
+.fw {
+  width: 100vw;
+  position: relative;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+}

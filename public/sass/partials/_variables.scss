@@ -1,0 +1,30 @@
+$black: #000;
+$width: 940px;
+$purple: #262161;
+$pink: #EE7297;
+$red: #E50714;
+$grey: #808080;
+$shad: 0 0 10px rgba(0,0,0,0.1), 0 5px 10px rgba(0,0,0,0.05);
+
+$deepred: #782200;
+$yellow: #ffc702;
+$lightred: #cc6a3a;
+$green: #468966;
+$lightyellow: #f2e78c;
+
+
+@mixin for-size($size) {
+  @if $size == phone-only {
+    @media (max-width: 599px) { @content; }
+  } @else if $size == tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+  } @else if $size == tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  } @else if $size == full-width-up {
+    @media (min-width: 940px) { @content; }  
+  } @else if $size == desktop-up {
+    @media (min-width: 1200px) { @content; }
+  } @else if $size == big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+  }
+}

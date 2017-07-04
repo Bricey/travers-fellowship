@@ -1,0 +1,352 @@
+#slideout {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index:9997;
+	background-color: rgba(0,0,0,0.92);
+	transition: 0.12s opacity ease-out;
+	//display: none;
+	opacity: 0;
+	pointer-events: none;
+
+	&.active {
+		//display: block;
+		pointer-events: auto;
+		opacity: 1;
+	}
+
+	.slideout-close {
+		justify-content: center;
+		position: fixed;
+		box-shadow: 0 2px 6px rgba(0,0,0,0.36);
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		background-color: #fff;
+		color: $black;
+		user-select: none;
+		transition: 0.15s background-color ease-out;
+		float: left;
+		margin: 80px 0 0 25px;
+		cursor: pointer;
+		z-index: 9999;
+		&:hover {
+			background-color: $yellow;
+		}
+	}
+}
+
+.feature {
+	background-color: #fff;
+	max-width: $width;
+	width: 100%;
+	position: relative;
+	padding: 0 15px 0 15px;
+	
+	@include for-size(full-width-up) {
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	
+
+	h1,h2,h3,h4,h5 {
+		width: calc(100% - 30px);
+		max-width: $width;
+		margin: 0 auto;
+		padding: 0 15px;
+	}
+
+	.hed-overlay {
+		width: 100%;
+		height: 100vh;
+		pointer-events: none;
+	}
+
+	.hed-img {
+		height: 100vh;
+		margin-top:30px;
+		margin-bottom: 0;
+		background-repeat: no-repeat;
+		background-position: center;	
+		pointer-events: none;
+		background-size: cover;
+		background-attachment: fixed;
+
+		&.ft1{
+			background-image: url(../images/art/ft-region-01.jpg);
+		}
+	}
+
+	.gallery-btn {
+		width: 140px;
+		height:60px;
+		border: 3px solid $black;
+		cursor: pointer;
+		padding: 0 10px;
+		transition: 0.15s all ease-out;
+		border-radius: 15px;
+		display: flex;
+		justify-content: center;
+		margin: 60px auto 60px auto; 
+
+		&:hover {
+			border-color: $deepred;
+			width: 160px;
+			padding: 0;
+		}
+
+		p {
+			text-align: center;
+			font-family: 'BentonSansCond-Regular',sans-serif;
+			font-size:1.1rem;
+			user-select: none;
+			margin: 0;
+
+			@include for-size(phone-only) {
+				padding: 10px 0;
+			}
+		}
+
+		@include for-size(desktop-up) {
+			margin: 0;
+			margin-left: 110px;
+			float: left;
+
+			&:hover {
+				width: 140px;
+			}
+		}
+	}
+
+	.ft-img {
+			height: 600px;
+			box-shadow: inset 0 0 10px rgba(0,0,0,0.25);
+			margin: 10px 0 120px 0;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			background-position: center;
+			overflow: hidden;
+			opacity: 0.45;
+
+		&.ft1{
+			background-image: url(../images/art/ft-example.jpg);
+			
+		}	
+		&.ft2 {
+			background-image: url(../images/art/ft-example.jpg);
+		}
+		&.example {
+			background-image: url(../images/art/ft-example.jpg);	
+		}
+
+		@include for-size(phone-only) {
+			height: 300px;
+		}
+
+		&.video {
+			
+		}
+
+		&.video video {
+			
+			margin: 0 auto;
+			// width: 100%;
+			// height: 100%;
+
+			@media (min-aspect-ratio: 16/9) {
+			    width: 100%;
+			    height: auto;
+			    
+			}
+
+			@media (max-aspect-ratio: 16/9) {
+			    width: auto;
+			    height: 100%;
+			    
+			}
+		}
+	}
+
+	h1 {
+		// padding: 90px 15px;
+		font-family: 'Spectral',serif;
+		font-size: 6.6rem;
+		text-align: center;
+		position: absolute;
+		top: 130px;
+	}
+
+	img.ico {
+		position: absolute;
+		text-align: center;
+		top: 240px;
+		left: calc(50% - 80px);
+		width: 120px;
+
+	}
+
+	p {
+		width: 100%;
+		// max-width: $width;
+		// margin: 0 auto;
+		margin-bottom: 20px;
+		// padding: 0 15px;
+
+		&.first {
+			margin-top: 160px !important;
+		}
+
+		&.caption {
+			width: 100%;
+			font-family: 'BentonSansCond-Bold',sans-serif;
+			font-size: 1.2rem;
+			text-align: right;
+			margin-top: 10px;
+			padding: 0;
+		}
+
+		span.firstcharacter {
+			  color: $deepred;
+			  float: left;
+			  font-weight: 700;
+			  font-size: 6rem;
+			  line-height: 60px;
+			  padding-top: 4px;
+			  padding-right: 4px;
+			  padding-left: 0px;
+			  font-family: 'Spectral',serif;
+		}
+	}
+
+	.pq {
+		max-width: 75%;
+		width: calc(100% - 30px);
+		font-family:'Spectral',serif;
+		color: $deepred;
+		font-size: 3.4rem;
+		margin: 0 auto;
+		margin-bottom: 60px;
+		margin-top: 60px;
+		font-weight: 600;
+		font-style: oblique;
+		background-image: url(../images/art/pq.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 70px auto;
+
+		.pq-cont {
+			min-height: 100px;
+			padding-top: 35px;
+			width: 100%;
+			text-align: center;
+			max-width: $width;
+			margin: 0 auto;
+		}
+
+		@include for-size(phone-only) {
+			font-size: 3rem;
+			margin: 45px 0 60px 0;
+			width: 100%;
+			line-height: 3.2rem;
+		}
+	}
+
+	.img-fw {
+		width: 100%;
+		height: auto;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		@include for-size(phone-only) {
+			margin: 0 auto;
+			float: none !important;
+			margin-bottom: 60px;
+		}
+	}
+
+	.img-sm {
+		&.left {
+			float: left;
+			margin-right: 5%;
+
+			@include for-size(full-width-up) {
+				margin-bottom: 20px;
+			}
+		}
+		&.right {
+			float: right;
+			margin-left: 5%;
+		}
+		img {
+			max-width: 320px;
+			height: auto;
+			width: 100%;
+		}
+		p.caption {
+
+		}
+		@include for-size(phone-only) {
+			margin: 0 auto;
+			float: none !important;
+			margin-bottom: 60px;
+		}
+	}
+
+	.iframeCont {
+		margin: 60px 0 50px 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		iframe {
+			max-width: $width;
+			width: 100%;
+			height: 500px;
+			margin: 0 auto;
+
+			@include for-size(phone-only) {
+				height: 250px;
+			}
+		}
+	}
+
+	.locatorMap {
+		margin: 0 auto;
+		width: 100%;
+		height: 100px;
+		display: flex;
+		justify-content: center;
+		margin-top: 40px;
+		margin-bottom: 40px;
+		img {
+			width: 100px;
+			height: auto;			
+			padding: 0;
+		}
+
+		@include for-size(desktop-up) {
+			float: left;
+			margin: 0;
+			margin-left: 25px;
+			width: 150px;
+			height: auto;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	footer {
+		height: 240px;
+		margin-top: 120px;
+		background-color: $yellow;
+	}
+}

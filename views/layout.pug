@@ -1,0 +1,74 @@
+doctype html
+html
+  head
+    title= `${title} | ${h.siteName}`
+    link(rel='stylesheet', href='/dist/style.css')
+    link(rel="shortcut icon" type="image/png" href="/images/icons/np_logo_outline.png")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    script(type='text/javascript' src="javascripts/jquery-min.js")
+    script(type='text/javascript' src="javascripts/jquery.fullpage.min.js")
+    script(type='text/javascript' src='javascripts/skrollr.min.js')
+    script(type='text/javascript' src="javascripts/nav-control.js")
+    
+  body
+    block header
+      header
+        div#progressBar.skrollable.skrollable-between(data-0="width:0%", data-end="width:100%")
+        div#headerCont
+          a.vc( href='http://www.nationalpost.com')
+            img.logo(src='/images/icons/np_logo_full.svg' alt='np logo')
+          div.navCont.vc
+            a.vc.chapters.btn(href="#")
+              img(src='/images/icons/chapt.svg' alt='chapters')
+            a.vc.menu.btn(href='#')   
+              img(src='/images/icons/nav.svg' alt='nav')
+        div#chapters
+          div.menuCont
+            a(href="#intro")
+              div.chapt.vc
+                h2 I
+                p INTRODUCTION
+            a(href="#child-labour")
+              div.chapt.vc
+                h2 II
+                p CHILD LABOUR
+            a(href="#turkey")
+              div.chapt.vc
+                h2 III
+                p TURKEY
+            a(href="#lebanon")
+              div.chapt.vc
+                h2 IV
+                p LEBANON
+            a(href="#jordan")
+              div.chapt.vc
+                h2 IV
+                p JORDAN
+            a(href="#canada")
+              div.chapt.vc
+                h2 V
+                p CANADA                        
+        div#menu
+          div.menuCont
+            img(src='/images/art/jt_logo.png' alt='Jim Travers Fellowship logo')
+            a(href="/feature")
+              div.featureLink.vc
+              h2 Feature Story
+            div.profilesCont
+              a(href="/profiles")
+                div.profile
+              a(href="/profiles")
+                div.profile
+              a(href="/profiles")
+                div.profile
+              a(href="/profiles")
+                div.profile
+              a(href="/profiles")
+                div.profile
+    div.inner
+      block content
+    block scripts
+      script(type="text/javascript" src="/javascripts/skrollr-init.js")
+      script(type="text/javascript" src="/javascripts/feature-control.js")
+
+      
