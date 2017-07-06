@@ -37,18 +37,39 @@ header {
      }
    } 
 
-  #progressBar {
+  progress {
     z-index:-9999;
-    width: 0;
+    width: 100%;
     height: 3px;
     position: absolute;
     
-    background-color: $yellow;
+    color: $yellow;
     transition: 0.15s opacity ease-out;
+    /* Reset the appearance */
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none;
 
+      /* Get rid of the default border in Firefox/Opera. */
+      border: none;
+
+      /* Progress bar container for Firefox/IE10+ */
+      background-color: transparent;
     &.dis {
       opacity:0;
     }
+  }
+
+  progress::-webkit-progress-bar {
+    background-color: transparent;
+  }
+
+  progress::-webkit-progress-value {
+    background-color: $yellow;
+  }
+
+  progress::-moz-progress-bar {
+    background-color: $yellow;
   }
 
   #headerCont {
@@ -143,14 +164,76 @@ header {
       height: 100%;
       margin: 0 auto;
 
+      div.menu-travers-cont {
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 1.2rem;
+        color: $grey;
+        font-family: "Spectral",serif;
+        font-style: oblique;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 350px;
+        padding-top: 100px;
+
+        @include for-size(phone-only) {
+          padding-top: 50px;
+          font-size: 1.2rem;
+        }
+        a.menu-travers {
+          img {
+            padding-top: 10px;
+            width: 220px;
+            height: auto;
+
+          }
+
+        }
+        
+      }
       .featureLink {
         width: 100%;
-        height: 140px;
-        background-color: $deepred;
+        height: 160px;
         margin-top: 60px;
         color: #fff;
         display: flex;
         justify-content: center;
+        position: relative;
+        flex-direction: column;
+        overflow: hidden;
+
+        .transBox {
+          background-image: url(/images/art/ft-region-01.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          opacity:0.35;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          z-index: -1;
+          transition: 0.24s all ease-out;
+        }
+
+        h2 {
+          color: $black;
+          margin: 0;
+          transition: 0.16s color ease-out;
+        }
+        h3.byline {
+          color: $deepred;
+          margin: 20px 0 0 0;
+          font-family: 'Spectral',serif;
+          font-size: 1.6rem;
+        }
+
+        &:hover {
+          h2 {
+            color: $deepred;
+          }
+          .transBox {
+            transform: scale(1.08);
+          }
+        }
       }
 
       .profilesCont {
@@ -185,20 +268,22 @@ header {
 
   #chapters {
     .menuCont {
+        display: flex;
+        flex-direction: column; 
       .chapt {
         cursor: pointer;
         transition: 0.22s background-color ease-out;
         display: flex;
         justify-content: center;
-        align-content: stretch;
+        // align-content: stretch;
         flex-direction: column;
         width: 100%;
-        padding-left: 30px;
+        // padding-left: 30px;
         font-family:'Spectral',serif;
         color: $deepred;
         align-content: space-between;
         border-bottom: 1px dotted $grey;
-        min-height: 100px;
+        flex: 1;
 
         &:hover {
           background-color: rgba(244,222,179,0.8);

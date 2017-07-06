@@ -89,15 +89,29 @@ header {
     header.chaptersOpen #headerCont .navCont a.menu {
       opacity: .2;
       pointer-events: none; }
-  header #progressBar {
+  header progress {
     z-index: -9999;
-    width: 0;
+    width: 100%;
     height: 3px;
     position: absolute;
-    background-color: #ffc702;
-    transition: 0.15s opacity ease-out; }
-    header #progressBar.dis {
+    color: #ffc702;
+    transition: 0.15s opacity ease-out;
+    /* Reset the appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Get rid of the default border in Firefox/Opera. */
+    border: none;
+    /* Progress bar container for Firefox/IE10+ */
+    background-color: transparent; }
+    header progress.dis {
       opacity: 0; }
+  header progress::-webkit-progress-bar {
+    background-color: transparent; }
+  header progress::-webkit-progress-value {
+    background-color: #ffc702; }
+  header progress::-moz-progress-bar {
+    background-color: #ffc702; }
   header #headerCont {
     margin: 10px 15px;
     height: 30px;
@@ -167,16 +181,62 @@ header {
       max-width: 940px;
       height: 100%;
       margin: 0 auto; }
+      header #menu .menuCont div.menu-travers-cont, header #chapters .menuCont div.menu-travers-cont {
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 1.2rem;
+        color: #808080;
+        font-family: "Spectral",serif;
+        font-style: oblique;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 350px;
+        padding-top: 100px; }
+        @media (max-width: 599px) {
+          header #menu .menuCont div.menu-travers-cont, header #chapters .menuCont div.menu-travers-cont {
+            padding-top: 50px;
+            font-size: 1.2rem; } }
+        header #menu .menuCont div.menu-travers-cont a.menu-travers img, header #chapters .menuCont div.menu-travers-cont a.menu-travers img {
+          padding-top: 10px;
+          width: 220px;
+          height: auto; }
       header #menu .menuCont .featureLink, header #chapters .menuCont .featureLink {
         width: 100%;
-        height: 140px;
-        background-color: #782200;
+        height: 160px;
         margin-top: 60px;
         color: #fff;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-pack: center;
-            justify-content: center; }
+            justify-content: center;
+        position: relative;
+        -ms-flex-direction: column;
+            flex-direction: column;
+        overflow: hidden; }
+        header #menu .menuCont .featureLink .transBox, header #chapters .menuCont .featureLink .transBox {
+          background-image: url(/images/art/ft-region-01.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          opacity: 0.35;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          z-index: -1;
+          transition: 0.24s all ease-out; }
+        header #menu .menuCont .featureLink h2, header #chapters .menuCont .featureLink h2 {
+          color: #000;
+          margin: 0;
+          transition: 0.16s color ease-out; }
+        header #menu .menuCont .featureLink h3.byline, header #chapters .menuCont .featureLink h3.byline {
+          color: #782200;
+          margin: 20px 0 0 0;
+          font-family: 'Spectral',serif;
+          font-size: 1.6rem; }
+        header #menu .menuCont .featureLink:hover h2, header #chapters .menuCont .featureLink:hover h2 {
+          color: #782200; }
+        header #menu .menuCont .featureLink:hover .transBox, header #chapters .menuCont .featureLink:hover .transBox {
+          -ms-transform: scale(1.08);
+              transform: scale(1.08); }
       header #menu .menuCont .profilesCont, header #chapters .menuCont .profilesCont {
         width: 100%;
         margin-top: 50px;
@@ -194,35 +254,38 @@ header {
             height: 100px;
             border-radius: 50%;
             background-color: #000; }
-  header #chapters .menuCont .chapt {
-    cursor: pointer;
-    transition: 0.22s background-color ease-out;
+  header #chapters .menuCont {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex-line-pack: stretch;
-        align-content: stretch;
     -ms-flex-direction: column;
-        flex-direction: column;
-    width: 100%;
-    padding-left: 30px;
-    font-family: 'Spectral',serif;
-    color: #782200;
-    -ms-flex-line-pack: justify;
-        align-content: space-between;
-    border-bottom: 1px dotted #808080;
-    min-height: 100px; }
-    header #chapters .menuCont .chapt:hover {
-      background-color: rgba(244, 222, 179, 0.8); }
-    header #chapters .menuCont .chapt h2 {
+        flex-direction: column; }
+    header #chapters .menuCont .chapt {
+      cursor: pointer;
+      transition: 0.22s background-color ease-out;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      width: 100%;
       font-family: 'Spectral',serif;
-      font-size: 2.2rem;
-      margin: 0 !important;
-      padding: 0 !important; }
-    header #chapters .menuCont .chapt p {
-      color: #000;
-      font-family: 'Spectral',serif; }
+      color: #782200;
+      -ms-flex-line-pack: justify;
+          align-content: space-between;
+      border-bottom: 1px dotted #808080;
+      -ms-flex: 1;
+          flex: 1; }
+      header #chapters .menuCont .chapt:hover {
+        background-color: rgba(244, 222, 179, 0.8); }
+      header #chapters .menuCont .chapt h2 {
+        font-family: 'Spectral',serif;
+        font-size: 2.2rem;
+        margin: 0 !important;
+        padding: 0 !important; }
+      header #chapters .menuCont .chapt p {
+        color: #000;
+        font-family: 'Spectral',serif; }
 
 #slideout {
   width: 100vw;
@@ -289,7 +352,8 @@ header {
     background-size: cover;
     background-attachment: fixed; }
     .feature .hed-img.ft1 {
-      background-image: url(fd28b737d8a66ecb0602ade2f88beccb.jpg); }
+      background-image: url(fd28b737d8a66ecb0602ade2f88beccb.jpg);
+      opacity: 0.35; }
   .feature .gallery-btn {
     width: 140px;
     height: 60px;
@@ -327,9 +391,9 @@ header {
         .feature .gallery-btn:hover {
           width: 140px; } }
   .feature .ft-img {
-    height: 600px;
+    height: 500px;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
-    margin: 80px 0 120px 0;
+    margin: 80px 0 80px 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -357,17 +421,27 @@ header {
           height: 100%; } }
   .feature h1 {
     font-family: 'Spectral',serif;
-    font-size: 6.2rem;
+    font-size: 5.8rem;
     text-align: center;
     position: absolute;
     top: 70px;
-    line-height: 5.8rem; }
+    line-height: 5.2rem; }
+    @media (max-width: 599px) {
+      .feature h1 {
+        font-size: 4.2rem;
+        line-height: 3.8rem;
+        top: 60px; } }
   .feature img.ico {
     position: absolute;
     text-align: center;
     top: 200px;
     left: calc(50% - 80px);
     width: 120px; }
+    @media (max-width: 599px) {
+      .feature img.ico {
+        top: 160px;
+        width: 95px;
+        left: calc(50% - 45px); } }
   .feature h2.sub {
     font-family: 'Spectral',serif;
     font-size: 1.6rem;
@@ -385,9 +459,14 @@ header {
     @media (max-width: 939px) {
       .feature h2.sub {
         left: 0; } }
+    @media (max-width: 599px) {
+      .feature h2.sub {
+        top: 300px;
+        font-size: 1.4rem;
+        line-height: 2.2rem; } }
   .feature h3.byline {
     font-family: 'Spectral',serif;
-    font-size: 2.4rem;
+    font-size: 2rem;
     text-align: center;
     color: #782200;
     position: absolute;
@@ -397,12 +476,16 @@ header {
     margin: 0 !important; }
     @media (max-width: 939px) {
       .feature h3.byline {
-        top: 530px; } }
+        top: 480px;
+        left: 0; } }
   .feature p {
     width: 100%;
     margin-bottom: 20px; }
     .feature p.first {
       margin-top: 160px !important; }
+      @media (max-width: 599px) {
+        .feature p.first {
+          margin-top: 80px !important; } }
     .feature p.caption {
       width: 100%;
       font-family: 'BentonSansCond-Bold',sans-serif;
@@ -420,8 +503,24 @@ header {
       padding-right: 4px;
       padding-left: 0px;
       font-family: 'Spectral',serif; }
+    .feature p.endCred {
+      font-style: italic;
+      font-family: 'Spectral',serif;
+      color: #808080;
+      margin-top: 60px; }
+      @media (max-width: 599px) {
+        .feature p.endCred {
+          margin-top: 40px; } }
+  .feature .divider {
+    width: 100%;
+    height: 12px;
+    margin: 60px 0 60px 0;
+    background-image: url(/images/icons/divider.jpg);
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: center; }
   .feature .pq {
-    max-width: 75%;
+    max-width: 100%;
     width: calc(100% - 30px);
     font-family: 'Spectral',serif;
     color: #782200;
@@ -444,10 +543,10 @@ header {
       margin: 0 auto; }
     @media (max-width: 599px) {
       .feature .pq {
-        font-size: 3rem;
+        font-size: 2.6rem;
         margin: 45px 0 60px 0;
-        width: 100%;
-        line-height: 3.2rem; } }
+        line-height: 3.2rem;
+        box-sizing: initial; } }
   .feature .img-fw {
     width: 100%;
     height: auto; }
@@ -521,7 +620,34 @@ header {
   .feature footer {
     height: 240px;
     margin-top: 120px;
-    background-color: #ffc702; }
+    background-color: #782200;
+    padding: 20px; }
+    .feature footer .credCont {
+      color: #fff; }
+      .feature footer .credCont p.cred {
+        font-family: 'BentonSansCond-Bold',sans-serif;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        letter-spacing: 0.07rem; }
+        .feature footer .credCont p.cred span {
+          font-family: 'Spectral',sans-serif;
+          font-size: 1.6rem; }
+      .feature footer .credCont a {
+        background-color: #fff;
+        width: 200px;
+        height: 80px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+            align-items: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+        transition: 0.16s background-color ease-out; }
+        .feature footer .credCont a img.footer-travers {
+          width: 80%;
+          height: auto; }
+        .feature footer .credCont a:hover {
+          background-color: #f2e78c; }
 
 @font-face {
   font-family: 'BentonSans';

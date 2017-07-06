@@ -3,6 +3,7 @@ $(document).ready(function() {
 	var slideoutToggle = $('.gallery-btn');
 	var slideoutClose = $('.slideout-close');
 	var galImg;
+	var progress = $('progress');
 	var galBtn = $('.gallery-btn');
 
 	var galleryObj = {
@@ -37,11 +38,6 @@ $(document).ready(function() {
 		$('.gal-cont').removeClass('url gal-fw');
 		$('.back').off();
 		$('.next').off();
-	});
-
-	$(window).on('resize',function() {
-		//slideout.css({'top':$(window).scrollTop(),'height':'100vh'});
-			if (galImg !== undefined) adjustImageProportions(galImg);
 	});
 
 	function adjustImageProportions(t) {
@@ -101,4 +97,33 @@ $(document).ready(function() {
 			adjustImageProportions(galImg);
 		});
 	}
+
+	// progressBar controls
+
+	var winHeight = $(window).height(),
+	  docHeight = $(document).height();
+	  max = docHeight - winHeight;
+
+	$(progress).attr('max', max);
+	var value = $(window).scrollTop();
+	$(progress).attr('value', value);
+
+	$(document).on('scroll', function() {
+	  value = $(window).scrollTop();
+	  progress.attr('value', value);
+	});
+
+
+	// window on resize controls
+
+	$(window).on('resize',function() {
+		//slideout.css({'top':$(window).scrollTop(),'height':'100vh'});
+			if (galImg !== undefined) adjustImageProportions(galImg);
+		winHeight = $(window).height(),
+	  	docHeight = $(document).height();
+	  	max = docHeight - winHeight;	
+		$(progress).attr('max', max);
+		value = $(window).scrollTop();
+		$(progress).attr('value', value);	
+	});
 });

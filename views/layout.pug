@@ -7,15 +7,14 @@ html
     meta(name="viewport" content="width=device-width, initial-scale=1")
     script(type='text/javascript' src="javascripts/jquery-min.js")
     script(type='text/javascript' src="javascripts/jquery.fullpage.min.js")
-    script(type='text/javascript' src='javascripts/skrollr.min.js')
     script(type='text/javascript' src="javascripts/nav-control.js")
     
   body
     block header
       header
-        div#progressBar.skrollable.skrollable-between(data-0="width:0%", data-end="width:100%")
+        progress#progressBar(value=0)
         div#headerCont
-          a.vc( href='http://www.nationalpost.com')
+          a.vc( href='http://www.nationalpost.com' target="_blank")
             img.logo(src='/images/icons/np_logo_full.svg' alt='np logo')
           div.navCont.vc
             a.vc.chapters.btn(href="#")
@@ -50,10 +49,11 @@ html
                 p CANADA                        
         div#menu
           div.menuCont
-            img(src='/images/art/jt_logo.png' alt='Jim Travers Fellowship logo')
             a(href="/feature")
               div.featureLink.vc
-              h2 Feature Story
+                div.transBox
+                h2 Feature Story
+                h3.byline By: Michael Petrou
             div.profilesCont
               a(href="/profiles")
                 div.profile
@@ -65,10 +65,13 @@ html
                 div.profile
               a(href="/profiles")
                 div.profile
+            div.menu-travers-cont
+              | This project was completed with financial support from
+              a.menu-travers(href="http://cusjc.ca/travers/" target="_blank")
+                img(src='/images/art/jt_logo.png' alt='Jim Travers Fellowship logo')
     div.inner
       block content
     block scripts
-      script(type="text/javascript" src="/javascripts/skrollr-init.js")
       script(type="text/javascript" src="/javascripts/feature-control.js")
 
       
