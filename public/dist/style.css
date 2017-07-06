@@ -329,7 +329,7 @@ header {
   .feature .ft-img {
     height: 600px;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
-    margin: 10px 0 120px 0;
+    margin: 80px 0 120px 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -357,16 +357,47 @@ header {
           height: 100%; } }
   .feature h1 {
     font-family: 'Spectral',serif;
-    font-size: 6.6rem;
+    font-size: 6.2rem;
     text-align: center;
     position: absolute;
-    top: 130px; }
+    top: 70px;
+    line-height: 5.8rem; }
   .feature img.ico {
     position: absolute;
     text-align: center;
-    top: 240px;
+    top: 200px;
     left: calc(50% - 80px);
     width: 120px; }
+  .feature h2.sub {
+    font-family: 'Spectral',serif;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    letter-spacing: 0.05rem;
+    text-align: center;
+    position: absolute;
+    font-style: italic;
+    top: 340px;
+    width: 100%;
+    margin: 0 !important;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    color: #fff; }
+    @media (max-width: 939px) {
+      .feature h2.sub {
+        left: 0; } }
+  .feature h3.byline {
+    font-family: 'Spectral',serif;
+    font-size: 2.4rem;
+    text-align: center;
+    color: #782200;
+    position: absolute;
+    font-weight: 700;
+    top: 460px;
+    width: 100%;
+    margin: 0 !important; }
+    @media (max-width: 939px) {
+      .feature h3.byline {
+        top: 530px; } }
   .feature p {
     width: 100%;
     margin-bottom: 20px; }
@@ -481,11 +512,11 @@ header {
       .feature .locatorMap {
         float: left;
         margin: 0;
-        margin-left: 25px;
+        margin-right: 60px;
         width: 150px;
         height: auto; }
         .feature .locatorMap img {
-          width: 100%;
+          width: auto;
           height: auto; } }
   .feature footer {
     height: 240px;

@@ -20,6 +20,8 @@ $lightyellow: #f2e78c;
     @media (min-width: 600px) { @content; }
   } @else if $size == tablet-landscape-up {
     @media (min-width: 900px) { @content; }
+  } @else if $size == full-width-down {
+    @media (max-width: 939px) { @content; }
   } @else if $size == full-width-up {
     @media (min-width: 940px) { @content; }  
   } @else if $size == desktop-up {
