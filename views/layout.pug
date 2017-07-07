@@ -6,7 +6,6 @@ html
     link(rel="shortcut icon" type="image/png" href="/images/icons/np_logo_outline.png")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     script(type='text/javascript' src="javascripts/jquery-min.js")
-    script(type='text/javascript' src="javascripts/jquery.fullpage.min.js")
     script(type='text/javascript' src="javascripts/nav-control.js")
     
   body
@@ -14,62 +13,49 @@ html
       header
         progress#progressBar(value=0)
         div#headerCont
-          a.vc( href='http://www.nationalpost.com' target="_blank")
-            img.logo(src='/images/icons/np_logo_full.svg' alt='np logo')
+          div.titlesCont.vc
+            a.vc( href='http://www.nationalpost.com' target="_blank")
+              img.logo(src='/images/icons/np_logo_full.svg' alt='np logo')
+            a.vc.hed-title(href="/")
+              |THE EXODUS
           div.navCont.vc
-            a.vc.chapters.btn(href="#")
-              img(src='/images/icons/chapt.svg' alt='chapters')
+            div.socialCont
+              a(href='#')   
+                img(src='/images/icons/ico_facebook.svg' alt='facebook')
+              a(href='#')
+                img(src='/images/icons/ico_twitter.svg' alt='twitter')
+              //-a(href='https://twitter.com/share?text=The+Exodus+–+A+special+report+on+Syria+by+@michaelpetrou,+supported+by+@RJT_Fellowship&via=nationalpost' target="_blank")   
+                img(src='/images/icons/ico_twitter.svg' alt='twitter')
             a.vc.menu.btn(href='#')   
-              img(src='/images/icons/nav.svg' alt='nav')
-        div#chapters
-          div.menuCont
-            a(href="#intro")
-              div.chapt.vc
-                h2 I
-                p INTRODUCTION
-            a(href="#child-labour")
-              div.chapt.vc
-                h2 II
-                p CHILD LABOUR
-            a(href="#turkey")
-              div.chapt.vc
-                h2 III
-                p TURKEY
-            a(href="#lebanon")
-              div.chapt.vc
-                h2 IV
-                p LEBANON
-            a(href="#jordan")
-              div.chapt.vc
-                h2 IV
-                p JORDAN
-            a(href="#canada")
-              div.chapt.vc
-                h2 V
-                p CANADA                        
+              img(src='/images/icons/nav.svg' alt='menu')
         div#menu
+          a(href="/feature")
+            div.featureLink.vc
+              div.transBox
+              h2 Feature Story
+              h3.byline By: Michael Petrou
+          h5 Profiles
           div.menuCont
-            a(href="/feature")
-              div.featureLink.vc
-                div.transBox
-                h2 Feature Story
-                h3.byline By: Michael Petrou
-            p.profiles Profiles    
-            div.profilesCont
-              a(href="/khalil")
-                div.profile
-              a(href="/fatima")
-                div.profile
-              a(href="/mohammed")
-                div.profile
-              a(href="/wadad")
-                div.profile
-              a(href="/abid")
-                div.profile
-            div.menu-travers-cont
-              | This project was completed with financial support from
-              a.menu-travers(href="http://cusjc.ca/travers/" target="_blank")
-                img(src='/images/art/jt_logo.png' alt='Jim Travers Fellowship logo')
+            a(href="/khalil")
+              div.chapt.vc
+                h2 Khalil
+                p XXX
+            a(href="/fatima")
+              div.chapt.vc
+                h2 Fatima
+                p XXX
+            a(href="/mohammed")
+              div.chapt.vc
+                h2 Mohammed
+                p XXX
+            a(href="/wadad")
+              div.chapt.vc
+                h2 Wadad
+                p XXX
+            a(href="/abid")
+              div.chapt.vc
+                h2 Abid
+                p XXX
     div.inner
       block content
     block scripts

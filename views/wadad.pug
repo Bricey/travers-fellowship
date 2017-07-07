@@ -1,132 +1,33 @@
 extends layout
 
 block content
-	div#fullpage
-		div.section.row
-			div.sectionCont.prof1-top
-				div.text.left.bg-gradient
-					div.hed
-						h1 Wadad
-						h2 Lebanon
+	style(type='text/css').
+		html {
+			background-color: #000;
+		}
+	div#profiles
+		article
+			div#intro.wadad
+				div.text.bg-gradient
+					h1 Wadad
+					h2 Lebanon
 					p “Our nationality is a curse. It’s just a source of pain for us and our children,” says Wadad Jomah, sitting on a mattress on the floor of her dark and fetid apartment in the Shatila refugee camp in Beirut. 
 					p She could be speaking for any of the 1.5 million Syrians in Lebanon, but she’s not. The curse is unique to a small and forgotten subset of that exodus. Though they were born and spent their lives in Syria, Wadad, her family and several thousand other refugees in this camp are Palestinians.
-		div.section
-			div.sectionCont
-				div.image.right.center
-					img(src="/images/art/beqaa-bread-oven.jpg" alt="Beqaa valley bread oven")
-				div.text.right
-					p Their parents and grandparents fled or were driven from Israel during that country’s 1948 war of independence — what Arabs call the Nakba, or “Disaster” — and eventually settled in the Yarmouk refugee camp on the outskirts of Damascus. Wadad and her husband, Hussein Jomah, were born there and remember their home fondly. It was large, with windows looking out over two streets. Relatives lived downstairs. Hussein worked as a production manager in a medical supplies factory.
-		div.section
-			div.sectionCont
-				div.text.left
-					p As Palestinians in Syria, Wadad and Hussein were under the care of the United Nations Relief and Works Agency for Palestinian Refugees in the Near East (UNRWA). But when the Syrian civil war tore the country apart, they suffered the same as their Syrian neighbours. The Yarmouk camp was the scene of heavy fighting between rebel militias and the Popular Front for the Liberation of Palestine – General Command, which backs Syrian President Bashar al-Assad and was supported in the Yarmouk fight by his Syrian army.
-		div.section
-			div.sectionCont
-				div.text.left
-					p Two of Wadad’s relatives were publicly executed by opposition groups, accused of collaboration with the Syrian regime. Another relative tried to enter the camp to visit his children who, she says, were part of Jabhat al-Nusra, an al-Qaeda affiliate. He was arrested by government forces and died in prison.
-					p Wadad, Hussein and their children fled Yarmouk three years ago during a short ceasefire and came to Shatila, which, like Yarmouk, was established for Palestinian refugees from Israel. It is a warren of rickety concrete where exposed and overloaded electrical wires are so thick above the alleys they block the sun. An NGO worker says three children were accidentally electrocuted the previous month.
-		div.section
-			div.sectionCont
-				div.text.left
-					p “When we first came, on the first night, I cried. It’s like a graveyard,” Wadad says.
-					p A neighbour, Dima Abd-Alkarim, also came here from Yarmouk, along with her three children. Her husband was arrested by government forces in Syria and disappeared. Two years ago, Dima sent her five-year-old daughter with her sister to make the dangerous Aegean Sea crossing to Europe. Dima couldn’t afford to pay the smuggler’s fee to take the rest of the family.
-					p “I dream of seeing her,” Dima says of her daughter. She doesn’t know when or how she will.
-		div.section
-			div.sectionCont
-				div.text.left
-					p Yarmouk, meanwhile, is still besieged and mostly in the hands of the Islamic State. Residents have starved to death. A woman from Yarmouk recently arrived in Shatila with her eight-year-old son. Whenever he argues with someone, he threatens to cut off their head.
-					p “I can’t live here anymore. I cry every night. I just want one room and a school for my son,” says Dima’s other sister, Iman, who is pregnant.
-					p Iman has made the trek to the Canadian embassy, located in a different suburb of Beirut, but didn’t make it past the front gate. She wants to get to Canada. Many here do. But their chances of getting there are miniscule. Because they are registered with UNRWA rather than the United Nations Refugee Agency (UNHCR), Palestinian refugees from Syria don’t have the same access to Canada’s refugee resettlement programs as do regular Syrian refugees.
-		div.section
-			div.sectionCont
-				div.text.left
-					p “This division in responsibility has been a factor in limiting the number of Palestinian refugees referred for resettlement,” a spokeswoman for Citizenship and Immigration Canada says in an email. Canada has accepted more than 40,000 Syrian refugees since October 2015. Between January 2015 and November 2016, it accepted only 35 Palestinians from Syria.
-					p Wadad says her Palestinian nationality was inconsequential in Syria. “We had a good life. All my friends are Syrians. They used to treat us as Syrians, and we used to treat them as Palestinians.”
-		div.section
-			div.sectionCont
-				div.text.left
-					p In Lebanon, they share, many of them, poverty, frustration and despair. But they don’t have an equal chance of escaping that through resettlement abroad.
-					p “It doesn’t mean anything to me,” Iman says of her Palestinian status. “I’m dying because of Palestine. If someone asked me to switch nationalities, I would.”
+				p.photo-caption Michael Petrou/National Post		
+			div#intro-block
+			p Their parents and grandparents fled or were driven from Israel during that country’s 1948 war of independence — what Arabs call the Nakba, or “Disaster” — and eventually settled in the Yarmouk refugee camp on the outskirts of Damascus. Wadad and her husband, Hussein Jomah, were born there and remember their home fondly. It was large, with windows looking out over two streets. Relatives lived downstairs. Hussein worked as a production manager in a medical supplies factory.
+			p As Palestinians in Syria, Wadad and Hussein were under the care of the United Nations Relief and Works Agency for Palestinian Refugees in the Near East (UNRWA). But when the Syrian civil war tore the country apart, they suffered the same as their Syrian neighbours. The Yarmouk camp was the scene of heavy fighting between rebel militias and the Popular Front for the Liberation of Palestine – General Command, which backs Syrian President Bashar al-Assad and was supported in the Yarmouk fight by his Syrian army.
+			p Two of Wadad’s relatives were publicly executed by opposition groups, accused of collaboration with the Syrian regime. Another relative tried to enter the camp to visit his children who, she says, were part of Jabhat al-Nusra, an al-Qaeda affiliate. He was arrested by government forces and died in prison.
+			p Wadad, Hussein and their children fled Yarmouk three years ago during a short ceasefire and came to Shatila, which, like Yarmouk, was established for Palestinian refugees from Israel. It is a warren of rickety concrete where exposed and overloaded electrical wires are so thick above the alleys they block the sun. An NGO worker says three children were accidentally electrocuted the previous month.
+			p “When we first came, on the first night, I cried. It’s like a graveyard,” Wadad says.
+			p A neighbour, Dima Abd-Alkarim, also came here from Yarmouk, along with her three children. Her husband was arrested by government forces in Syria and disappeared. Two years ago, Dima sent her five-year-old daughter with her sister to make the dangerous Aegean Sea crossing to Europe. Dima couldn’t afford to pay the smuggler’s fee to take the rest of the family.
+			p “I dream of seeing her,” Dima says of her daughter. She doesn’t know when or how she will.
+			p Yarmouk, meanwhile, is still besieged and mostly in the hands of the Islamic State. Residents have starved to death. A woman from Yarmouk recently arrived in Shatila with her eight-year-old son. Whenever he argues with someone, he threatens to cut off their head.
+			p “I can’t live here anymore. I cry every night. I just want one room and a school for my son,” says Dima’s other sister, Iman, who is pregnant.
+			p Iman has made the trek to the Canadian embassy, located in a different suburb of Beirut, but didn’t make it past the front gate. She wants to get to Canada. Many here do. But their chances of getting there are miniscule. Because they are registered with UNRWA rather than the United Nations Refugee Agency (UNHCR), Palestinian refugees from Syria don’t have the same access to Canada’s refugee resettlement programs as do regular Syrian refugees.
+			p “This division in responsibility has been a factor in limiting the number of Palestinian refugees referred for resettlement,” a spokeswoman for Citizenship and Immigration Canada says in an email. Canada has accepted more than 40,000 Syrian refugees since October 2015. Between January 2015 and November 2016, it accepted only 35 Palestinians from Syria.
+			p Wadad says her Palestinian nationality was inconsequential in Syria. “We had a good life. All my friends are Syrians. They used to treat us as Syrians, and we used to treat them as Palestinians.”
+			p In Lebanon, they share, many of them, poverty, frustration and despair. But they don’t have an equal chance of escaping that through resettlement abroad.
+			p “It doesn’t mean anything to me,” Iman says of her Palestinian status. “I’m dying because of Palestine. If someone asked me to switch nationalities, I would.”
 
 block scripts
-	script.
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				//Navigation
-				menu: '#menu',
-				lockAnchors: false,
-				anchors:['firstPage', 'secondPage',''],
-				navigation: true,
-				navigationPosition: 'right',
-				navigationTooltips: ['firstSlide', 'secondSlide'],
-				showActiveTooltip: false,
-				slidesNavigation: false,
-				slidesNavPosition: 'bottom',
-
-				//Scrolling
-				css3: true,
-				scrollingSpeed: 700,
-				autoScrolling: true,
-				fitToSection: true,
-				fitToSectionDelay: 1000,
-				scrollBar: false,
-				easing: 'easeInOutCubic',
-				easingcss3: 'ease',
-				loopBottom: false,
-				loopTop: false,
-				loopHorizontal: true,
-				continuousVertical: false,
-				continuousHorizontal: false,
-				scrollHorizontally: false,
-				interlockedSlides: false,
-				dragAndMove: false,
-				offsetSections: false,
-				resetSliders: false,
-				fadingEffect: false,
-				normalScrollElements: '#element1, .element2',
-				scrollOverflow: false,
-				scrollOverflowReset: false,
-				scrollOverflowOptions: null,
-				touchSensitivity: 15,
-				normalScrollElementTouchThreshold: 5,
-				bigSectionsDestination: null,
-
-				//Accessibility
-				keyboardScrolling: true,
-				animateAnchor: true,
-				recordHistory: true,
-
-				//Design
-				controlArrows: true,
-				verticalCentered: true,
-				sectionsColor : '#000',
-				paddingTop: '3em',
-				paddingBottom: '10px',
-				fixedElements: '#header, .footer',
-				responsiveWidth: 0,
-				responsiveHeight: 0,
-				responsiveSlides: false,
-				parallax: false,
-				parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
-
-				//Custom selectors
-				sectionSelector: '.section',
-				slideSelector: '.slide',
-
-				lazyLoading: true,
-
-				//events
-				onLeave: function(index, nextIndex, direction){},
-				afterLoad: function(anchorLink, index){},
-				afterRender: function(){},
-				afterResize: function(){},
-				afterResponsive: function(isResponsive){},
-				afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-				onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-			});
-		});
-
-
-
-
-	

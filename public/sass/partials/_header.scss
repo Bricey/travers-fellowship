@@ -9,33 +9,13 @@ header {
   transition: 0.32s height ease-out;
 
   &.menuOpen {
-    height: 100%;
+    height: 100vh;
     box-shadow: none;
-
-    #headerCont .navCont a.chapters {
-      opacity: 0.2;
-      pointer-events: none;
-    }
 
     #headerCont .navCont a.menu:after {
       content: 'Close';
     }
-
  }
-
-   &.chaptersOpen {
-    height: 100%;
-    box-shadow: none;
-    
-    #headerCont .navCont a.chapters:after {
-      content: "Return";
-    }
-
-     #headerCont .navCont a.menu {
-       opacity: .2;
-       pointer-events: none;
-     }
-   } 
 
   progress {
     z-index:-9999;
@@ -91,8 +71,26 @@ header {
         }
     }
 
+    .titlesCont {
+      display: flex;
+      width: 280px;
+      justify-content: space-between;
+    }
+
+    a.hed-title {
+      font-family: 'Spectral',serif;
+      font-size:1.6rem;
+      font-weight: 700;
+      border-left: 1px solid $black;
+      padding-left: 20px;
+
+      @include for-size(phone-only) {
+        display: none;
+      }
+    }
+
     .navCont {
-      width:200px;
+      width:220px;
       height: 100%;
       flex: display;
       justify-content: space-between;
@@ -100,41 +98,41 @@ header {
       font-size: 1.2rem;
 
       @include for-size(phone-only) {
-          width: 100px;
+          width: 140px;
       }
 
+      .socialCont {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+
+        a {
+          text-decoration: none;
+          margin: 0;
+          padding: 0;
+          &:first-child {
+            margin-right: 6px;
+          }
+          img {
+            height: auto;
+            width: 28px;
+          }
+        }
+      }  
+
       a {
-        width: 50%;
+        width: 40%;
         height: 100%;
         text-decoration: none;
         display: flex;
         align-content: center;
-
-        &.chapters {
-          padding-right:15px;
-          img {
-            width: 12px;
-            height: auto;
-          }
-
-          &:after {
-            content: 'Chapters';
-            margin-left: 7px;
-    
-            @include for-size(phone-only) {
-                display: none;
-            }
-
-          }        
-        }
-
       &.menu {
         img {
           width: 22px;
           height: auto;
         }
         &:after {
-          content: 'Menu';
+          content: '';
           margin-left: 7px;
 
           @include for-size(phone-only) {
@@ -149,165 +147,83 @@ header {
       }
 
       }
-  }
+    }
 
   } //end #headerCont
 
-  #menu, #chapters {
+
+
+  #menu {
     width: 100%;
     height: 100%;
-    margin-top: 50px;
+    margin-top: 10px;
 
     @include for-size(phone-only) {
       margin-top: 20px;
     }
-    
-    .menuCont {
+    .featureLink {
       width: 100%;
-      max-width: $width;
-      height: 100%;
-      margin: 0 auto;
+      height: 120px;
+      margin-top: 5px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      flex-direction: column;
+      overflow: hidden;
 
-      div.menu-travers-cont {
-        text-align: center;
-        font-size: 1.5rem;
-        line-height: 1.2rem;
-        color: $lightgrey;
-        font-family: "Spectral",serif;
-        font-style: oblique;
-        margin: 0 auto;
-        width: 100%;
-        max-width: 350px;
-        padding-top: 100px;
-
-        @include for-size(phone-only) {
-          padding-top: 30px;
-          font-size: 1.2rem;
-        }
-        a.menu-travers {
-          img {
-            padding-top: 16px;
-            width: 220px;
-            height: auto;
-          }
-
-        }
-        
-      }
-      .featureLink {
-        width: 100%;
-        height: 160px;
-        margin-top: 60px;
-        display: flex;
-        justify-content: center;
-        position: relative;
-        flex-direction: column;
-        overflow: hidden;
-
-        @include for-size(phone-only) {
-          margin-top: 0;
-        }
-
-        .transBox {
-          background-image: url(/images/art/ft-region-01.jpg);
-          background-repeat: no-repeat;
-          background-size: cover;
-          opacity:0.35;
-          position: absolute;
-          height: 100%;
-          width: 100%;
-          z-index: -1;
-          transition: 0.24s all ease-out;
-        }
-
-        h2 {
-          color: $black;
-          margin: 0;
-          transition: 0.16s color ease-out;
-        }
-        h3.byline {
-          color: $deepred;
-          margin: 20px 0 0 0;
-          font-family: 'Spectral',serif;
-          font-size: 1.6rem;
-        }
-
-        &:hover {
-          h2 {
-            color: $deepred;
-          }
-          .transBox {
-            transform: scale(1.08);
-          }
-        }
+      @include for-size(phone-only) {
+        margin-top: 0;
       }
 
-      p.profiles {
-        text-align: center;
-        margin: 0 auto;
-        margin-top: 40px;
+      .transBox {
+        background-image: url(/images/art/ft-region-01.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity:0.35;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        transition: 0.24s all ease-out;
+      }
+
+      h2 {
+        color: $black;
+        margin: 0;
+        transition: 0.16s color ease-out;
+      }
+      h3.byline {
+        color: $deepred;
+        margin: 20px 0 0 0;
         font-family: 'Spectral',serif;
-        font-style: oblique;
-        font-size: 2rem;
-        color: $grey;
-        letter-spacing:0.12rem;
-
-        @include for-size(phone-only) {
-          margin-top: 10px;
-        }
+        font-size: 1.6rem;
       }
 
-      .profilesCont {
-        width: 100%;
-        margin-top: 24px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        a {
-          margin: 0;
-          margin-right: 25px;
-
-          &:last-child {
-            margin: 0;
-          }
-
-          .profile {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background-color: $black;
-
-            @include for-size(phone-only) {
-              width: 62px;
-              height: 62px;
-            }
-          } 
-
+      &:hover {
+        h2 {
+          color: $deepred;
         }
-
-        @include for-size(phone-only) {
-          flex-wrap: wrap;
-          margin-top: 6px;
-          a {
-            margin-right: 7px !important;
-            &:last-child {
-              margin-right: 0 !important;
-            }
-          }
+        .transBox {
+          transform: scale(1.08);
         }
+      }
+     } 
 
+     h5 {
+      text-align: center;
+      color: $grey;
+      letter-spacing:0.09rem;
+      font-size: 1.8rem;
+      font-style: oblique;
+      font-family:'Spectral',serif;
+      margin-top:30px
+     }
 
-      } //end profilesCont
-    }
-    
-
-  } // end menu
-
-  #chapters {
     .menuCont {
         display: flex;
         flex-direction: column; 
-        height: 85vh;
+        height: 60vh;
+        margin-top:5px;
 
       a{
         flex: 1;
@@ -331,13 +247,14 @@ header {
           }
           h2 {
             font-family:'Spectral',serif;
-            font-size: 2.2rem;
+            font-size: 2rem;
             margin: 0 !important;
             padding: 0 !important;
+            letter-spacing: 0.07rem;
           }
           p {
             color: $black;
-            font-family:'Spectral',serif;
+            font-family:'BentonSansCond-Medium',sans-serif;
           }
       } 
       } // end chap

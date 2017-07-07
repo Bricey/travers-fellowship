@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700);@import url(https://fonts.googleapis.com/css?family=Spectral:400,600,600i);html {
+@import url(https://fonts.googleapis.com/css?family=Spectral:400,600,600i);html {
   margin: 0 !important;
   padding: 0 !important; }
 
@@ -74,21 +74,10 @@ header {
   overflow: hidden;
   transition: 0.32s height ease-out; }
   header.menuOpen {
-    height: 100%;
+    height: 100vh;
     box-shadow: none; }
-    header.menuOpen #headerCont .navCont a.chapters {
-      opacity: 0.2;
-      pointer-events: none; }
     header.menuOpen #headerCont .navCont a.menu:after {
       content: 'Close'; }
-  header.chaptersOpen {
-    height: 100%;
-    box-shadow: none; }
-    header.chaptersOpen #headerCont .navCont a.chapters:after {
-      content: "Return"; }
-    header.chaptersOpen #headerCont .navCont a.menu {
-      opacity: .2;
-      pointer-events: none; }
   header progress {
     z-index: -9999;
     width: 100%;
@@ -130,8 +119,23 @@ header {
         cursor: pointer;
         height: auto;
         width: 100%; }
+    header #headerCont .titlesCont {
+      display: -ms-flexbox;
+      display: flex;
+      width: 280px;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+    header #headerCont a.hed-title {
+      font-family: 'Spectral',serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      border-left: 1px solid #000;
+      padding-left: 20px; }
+      @media (max-width: 599px) {
+        header #headerCont a.hed-title {
+          display: none; } }
     header #headerCont .navCont {
-      width: 200px;
+      width: 220px;
       height: 100%;
       -ms-flex: display;
           flex: display;
@@ -141,188 +145,135 @@ header {
       font-size: 1.2rem; }
       @media (max-width: 599px) {
         header #headerCont .navCont {
-          width: 100px; } }
+          width: 140px; } }
+      header #headerCont .navCont .socialCont {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+        -ms-flex-line-pack: center;
+            align-content: center; }
+        header #headerCont .navCont .socialCont a {
+          text-decoration: none;
+          margin: 0;
+          padding: 0; }
+          header #headerCont .navCont .socialCont a:first-child {
+            margin-right: 6px; }
+          header #headerCont .navCont .socialCont a img {
+            height: auto;
+            width: 28px; }
       header #headerCont .navCont a {
-        width: 50%;
+        width: 40%;
         height: 100%;
         text-decoration: none;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-line-pack: center;
             align-content: center; }
-        header #headerCont .navCont a.chapters {
-          padding-right: 15px; }
-          header #headerCont .navCont a.chapters img {
-            width: 12px;
-            height: auto; }
-          header #headerCont .navCont a.chapters:after {
-            content: 'Chapters';
-            margin-left: 7px; }
-            @media (max-width: 599px) {
-              header #headerCont .navCont a.chapters:after {
-                display: none; } }
         header #headerCont .navCont a.menu img {
           width: 22px;
           height: auto; }
         header #headerCont .navCont a.menu:after {
-          content: 'Menu';
+          content: '';
           margin-left: 7px; }
           @media (max-width: 599px) {
             header #headerCont .navCont a.menu:after {
               display: none; } }
         header #headerCont .navCont a img.hover {
           fill: #782200; }
-  header #menu, header #chapters {
+  header #menu {
     width: 100%;
     height: 100%;
-    margin-top: 50px; }
+    margin-top: 10px; }
     @media (max-width: 599px) {
-      header #menu, header #chapters {
+      header #menu {
         margin-top: 20px; } }
-    header #menu .menuCont, header #chapters .menuCont {
+    header #menu .featureLink {
       width: 100%;
-      max-width: 940px;
-      height: 100%;
-      margin: 0 auto; }
-      header #menu .menuCont div.menu-travers-cont, header #chapters .menuCont div.menu-travers-cont {
-        text-align: center;
-        font-size: 1.5rem;
-        line-height: 1.2rem;
-        color: #cccdcd;
-        font-family: "Spectral",serif;
-        font-style: oblique;
-        margin: 0 auto;
-        width: 100%;
-        max-width: 350px;
-        padding-top: 100px; }
-        @media (max-width: 599px) {
-          header #menu .menuCont div.menu-travers-cont, header #chapters .menuCont div.menu-travers-cont {
-            padding-top: 30px;
-            font-size: 1.2rem; } }
-        header #menu .menuCont div.menu-travers-cont a.menu-travers img, header #chapters .menuCont div.menu-travers-cont a.menu-travers img {
-          padding-top: 16px;
-          width: 220px;
-          height: auto; }
-      header #menu .menuCont .featureLink, header #chapters .menuCont .featureLink {
-        width: 100%;
-        height: 160px;
-        margin-top: 60px;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-pack: center;
-            justify-content: center;
-        position: relative;
-        -ms-flex-direction: column;
-            flex-direction: column;
-        overflow: hidden; }
-        @media (max-width: 599px) {
-          header #menu .menuCont .featureLink, header #chapters .menuCont .featureLink {
-            margin-top: 0; } }
-        header #menu .menuCont .featureLink .transBox, header #chapters .menuCont .featureLink .transBox {
-          background-image: url(/images/art/ft-region-01.jpg);
-          background-repeat: no-repeat;
-          background-size: cover;
-          opacity: 0.35;
-          position: absolute;
-          height: 100%;
-          width: 100%;
-          z-index: -1;
-          transition: 0.24s all ease-out; }
-        header #menu .menuCont .featureLink h2, header #chapters .menuCont .featureLink h2 {
-          color: #000;
-          margin: 0;
-          transition: 0.16s color ease-out; }
-        header #menu .menuCont .featureLink h3.byline, header #chapters .menuCont .featureLink h3.byline {
-          color: #782200;
-          margin: 20px 0 0 0;
-          font-family: 'Spectral',serif;
-          font-size: 1.6rem; }
-        header #menu .menuCont .featureLink:hover h2, header #chapters .menuCont .featureLink:hover h2 {
-          color: #782200; }
-        header #menu .menuCont .featureLink:hover .transBox, header #chapters .menuCont .featureLink:hover .transBox {
-          -ms-transform: scale(1.08);
-              transform: scale(1.08); }
-      header #menu .menuCont p.profiles, header #chapters .menuCont p.profiles {
-        text-align: center;
-        margin: 0 auto;
-        margin-top: 40px;
-        font-family: 'Spectral',serif;
-        font-style: oblique;
-        font-size: 2rem;
-        color: #808080;
-        letter-spacing: 0.12rem; }
-        @media (max-width: 599px) {
-          header #menu .menuCont p.profiles, header #chapters .menuCont p.profiles {
-            margin-top: 10px; } }
-      header #menu .menuCont .profilesCont, header #chapters .menuCont .profilesCont {
-        width: 100%;
-        margin-top: 24px;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-pack: center;
-            justify-content: center;
-        -ms-flex-align: center;
-            align-items: center; }
-        header #menu .menuCont .profilesCont a, header #chapters .menuCont .profilesCont a {
-          margin: 0;
-          margin-right: 25px; }
-          header #menu .menuCont .profilesCont a:last-child, header #chapters .menuCont .profilesCont a:last-child {
-            margin: 0; }
-          header #menu .menuCont .profilesCont a .profile, header #chapters .menuCont .profilesCont a .profile {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background-color: #000; }
-            @media (max-width: 599px) {
-              header #menu .menuCont .profilesCont a .profile, header #chapters .menuCont .profilesCont a .profile {
-                width: 62px;
-                height: 62px; } }
-        @media (max-width: 599px) {
-          header #menu .menuCont .profilesCont, header #chapters .menuCont .profilesCont {
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-            margin-top: 6px; }
-            header #menu .menuCont .profilesCont a, header #chapters .menuCont .profilesCont a {
-              margin-right: 7px !important; }
-              header #menu .menuCont .profilesCont a:last-child, header #chapters .menuCont .profilesCont a:last-child {
-                margin-right: 0 !important; } }
-  header #chapters .menuCont {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    height: 85vh; }
-    header #chapters .menuCont a {
-      -ms-flex: 1;
-          flex: 1; }
-      header #chapters .menuCont a .chapt {
-        cursor: pointer;
-        transition: 0.22s background-color ease-out;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-pack: center;
-            justify-content: center;
-        -ms-flex-direction: column;
-            flex-direction: column;
-        width: 100%;
+      height: 120px;
+      margin-top: 5px;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center;
+      position: relative;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      overflow: hidden; }
+      @media (max-width: 599px) {
+        header #menu .featureLink {
+          margin-top: 0; } }
+      header #menu .featureLink .transBox {
+        background-image: url(/images/art/ft-region-01.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.35;
+        position: absolute;
         height: 100%;
-        font-family: 'Spectral',serif;
+        width: 100%;
+        z-index: -1;
+        transition: 0.24s all ease-out; }
+      header #menu .featureLink h2 {
+        color: #000;
+        margin: 0;
+        transition: 0.16s color ease-out; }
+      header #menu .featureLink h3.byline {
         color: #782200;
-        -ms-flex-line-pack: justify;
-            align-content: space-between;
-        border-bottom: 1px dotted #808080;
+        margin: 20px 0 0 0;
+        font-family: 'Spectral',serif;
+        font-size: 1.6rem; }
+      header #menu .featureLink:hover h2 {
+        color: #782200; }
+      header #menu .featureLink:hover .transBox {
+        -ms-transform: scale(1.08);
+            transform: scale(1.08); }
+    header #menu h5 {
+      text-align: center;
+      color: #808080;
+      letter-spacing: 0.09rem;
+      font-size: 1.8rem;
+      font-style: oblique;
+      font-family: 'Spectral',serif;
+      margin-top: 30px; }
+    header #menu .menuCont {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      height: 60vh;
+      margin-top: 5px; }
+      header #menu .menuCont a {
         -ms-flex: 1;
             flex: 1; }
-        header #chapters .menuCont a .chapt:hover {
-          background-color: rgba(244, 222, 179, 0.8); }
-        header #chapters .menuCont a .chapt h2 {
+        header #menu .menuCont a .chapt {
+          cursor: pointer;
+          transition: 0.22s background-color ease-out;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-pack: center;
+              justify-content: center;
+          -ms-flex-direction: column;
+              flex-direction: column;
+          width: 100%;
+          height: 100%;
           font-family: 'Spectral',serif;
-          font-size: 2.2rem;
-          margin: 0 !important;
-          padding: 0 !important; }
-        header #chapters .menuCont a .chapt p {
-          color: #000;
-          font-family: 'Spectral',serif; }
+          color: #782200;
+          -ms-flex-line-pack: justify;
+              align-content: space-between;
+          border-bottom: 1px dotted #808080;
+          -ms-flex: 1;
+              flex: 1; }
+          header #menu .menuCont a .chapt:hover {
+            background-color: rgba(244, 222, 179, 0.8); }
+          header #menu .menuCont a .chapt h2 {
+            font-family: 'Spectral',serif;
+            font-size: 2rem;
+            margin: 0 !important;
+            padding: 0 !important;
+            letter-spacing: 0.07rem; }
+          header #menu .menuCont a .chapt p {
+            color: #000;
+            font-family: 'BentonSansCond-Medium',sans-serif; }
 
 #slideout {
   width: 100vw;
@@ -799,8 +750,94 @@ p b {
 
 #profiles {
   width: 100vw;
-  height: 100vh;
-  background-color: #000; }
+  background-color: #000;
+  color: #fff;
+  font-family: 'BentonSans-Regular';
+  padding: 30px 0 100px 0; }
+  #profiles article {
+    max-width: 940px;
+    margin: 0 auto; }
+    #profiles article p {
+      font-size: 1.4rem;
+      margin-bottom: 20px; }
+      @media (max-width: 599px) {
+        #profiles article p {
+          font-size: 1.25rem; } }
+    @media (max-width: 939px) {
+      #profiles article {
+        padding: 0 15px 0 15px; } }
+    #profiles article #intro-block {
+      width: 100vw;
+      height: 100vh;
+      margin-bottom: 40px; }
+    #profiles article #intro {
+      width: 100vw;
+      height: 100vh;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      left: 0;
+      top: 0; }
+      #profiles article #intro p.photo-caption {
+        position: absolute;
+        margin: 0 15px 6px 0;
+        letter-spacing: 0.06rem;
+        bottom: 0;
+        right: 0;
+        text-align: right;
+        color: #fff;
+        font-family: 'BentonSansCond-Medium',sans-serif;
+        font-size: 1.1rem;
+        text-shadow: 0 2px rgba(0, 0, 0, 0.8); }
+      #profiles article #intro.khalil {
+        background-image: url(1a413e9dc8b66ad1e4a65729133c5172.jpg); }
+      #profiles article #intro.fatima {
+        background-image: url(307f739fe5d0f019af8314455f658a72.jpg); }
+      #profiles article #intro.mohammed {
+        background-image: url(9c8f9c45137a70a5c0cacfc237e1c27f.jpg); }
+      #profiles article #intro.wadad {
+        background-image: url(c4c0002ec8675fa764206e5eea6e9eff.jpg); }
+      #profiles article #intro.abid {
+        background-image: url(9c3570ae37ea43b75c1dab98daf39f40.jpg); }
+      #profiles article #intro .text {
+        padding: 100px 0 0 15px;
+        width: 70% !important; }
+        #profiles article #intro .text h1 {
+          font-family: 'Spectral',serif;
+          font-size: 5rem;
+          padding: 0;
+          margin: 0;
+          letter-spacing: 0.11rem; }
+        #profiles article #intro .text h2 {
+          font-family: 'BentonSansCond-Medium',sans-serif;
+          font-size: 1.4rem;
+          letter-spacing: 0.85rem;
+          margin: 0 0 30px 0; }
+        #profiles article #intro .text.bg-gradient {
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); }
+          #profiles article #intro .text.bg-gradient p, #profiles article #intro .text.bg-gradient * {
+            text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+            width: 70%; }
+        @media (max-width: 939px) {
+          #profiles article #intro .text {
+            width: 95% !important; } }
+        @media (max-width: 599px) {
+          #profiles article #intro .text h1 {
+            font-size: 4rem; }
+          #profiles article #intro .text h2 {
+            font-size: 1.3rem; }
+          #profiles article #intro .text.bg-gradient {
+            width: 100%;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 40%, transparent 100%); }
+            #profiles article #intro .text.bg-gradient p, #profiles article #intro .text.bg-gradient * {
+              width: 90%; } }
 
 #fullpage {
   background-color: #000 !important; }
@@ -837,61 +874,6 @@ p b {
         background-position: 50%; }
       #fullpage .section .sectionCont.prof1-top {
         background-image: url(/images/art/beqaa-camp-mud.jpg); }
-    #fullpage .section .text {
-      box-sizing: border-box;
-      width: 50%;
-      height: 100%;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-line-pack: center;
-          align-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-      #fullpage .section .text.left {
-        -ms-flex-order: 1;
-            order: 1;
-        padding: 50px 0 0 20px; }
-      #fullpage .section .text.right {
-        -ms-flex-order: 2;
-            order: 2;
-        padding: 50px 20px 0 20px; }
-      @media (max-width: 599px) {
-        #fullpage .section .text {
-          width: 100%; }
-          #fullpage .section .text p {
-            font-size: 1.2rem;
-            max-width: 100%; }
-          #fullpage .section .text.left {
-            padding: 40px 20px 0 20px; }
-          #fullpage .section .text.right {
-            padding: 40px 20px 0 20px; } }
-      #fullpage .section .text.bg-gradient {
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); }
-        #fullpage .section .text.bg-gradient p, #fullpage .section .text.bg-gradient * {
-          text-shadow: 0 0 2px rgba(0, 0, 0, 0.6); }
-      #fullpage .section .text p {
-        color: #fff;
-        font-size: 1.4rem;
-        max-width: 80%;
-        margin-bottom: 20px; }
-        #fullpage .section .text p:last-child {
-          margin-bottom: 0; }
-      #fullpage .section .text .hed {
-        padding: 50px 0 30px 0; }
-        #fullpage .section .text .hed h1 {
-          font-family: 'Spectral',serif;
-          font-size: 5rem;
-          padding: 0;
-          margin: 0;
-          letter-spacing: 0.11rem; }
-        #fullpage .section .text .hed h2 {
-          font-family: 'BentonSansCond-Medium',sans-serif;
-          font-size: 1.4rem;
-          letter-spacing: 0.85rem;
-          margin: 0; }
     #fullpage .section .image {
       overflow: hidden;
       width: 50%;
