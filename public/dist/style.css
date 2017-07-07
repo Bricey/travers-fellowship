@@ -185,7 +185,7 @@ header {
         text-align: center;
         font-size: 1.5rem;
         line-height: 1.2rem;
-        color: #808080;
+        color: #cccdcd;
         font-family: "Spectral",serif;
         font-style: oblique;
         margin: 0 auto;
@@ -197,14 +197,13 @@ header {
             padding-top: 50px;
             font-size: 1.2rem; } }
         header #menu .menuCont div.menu-travers-cont a.menu-travers img, header #chapters .menuCont div.menu-travers-cont a.menu-travers img {
-          padding-top: 10px;
+          padding-top: 16px;
           width: 220px;
           height: auto; }
       header #menu .menuCont .featureLink, header #chapters .menuCont .featureLink {
         width: 100%;
         height: 160px;
         margin-top: 60px;
-        color: #fff;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-pack: center;
@@ -237,9 +236,18 @@ header {
         header #menu .menuCont .featureLink:hover .transBox, header #chapters .menuCont .featureLink:hover .transBox {
           -ms-transform: scale(1.08);
               transform: scale(1.08); }
+      header #menu .menuCont p.profiles, header #chapters .menuCont p.profiles {
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 40px;
+        font-family: 'Spectral',serif;
+        font-style: oblique;
+        font-size: 2rem;
+        color: #808080;
+        letter-spacing: 0.12rem; }
       header #menu .menuCont .profilesCont, header #chapters .menuCont .profilesCont {
         width: 100%;
-        margin-top: 50px;
+        margin-top: 24px;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-pack: center;
@@ -258,34 +266,39 @@ header {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
-        flex-direction: column; }
-    header #chapters .menuCont .chapt {
-      cursor: pointer;
-      transition: 0.22s background-color ease-out;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-pack: center;
-          justify-content: center;
-      -ms-flex-direction: column;
-          flex-direction: column;
-      width: 100%;
-      font-family: 'Spectral',serif;
-      color: #782200;
-      -ms-flex-line-pack: justify;
-          align-content: space-between;
-      border-bottom: 1px dotted #808080;
+        flex-direction: column;
+    height: 85vh; }
+    header #chapters .menuCont a {
       -ms-flex: 1;
           flex: 1; }
-      header #chapters .menuCont .chapt:hover {
-        background-color: rgba(244, 222, 179, 0.8); }
-      header #chapters .menuCont .chapt h2 {
+      header #chapters .menuCont a .chapt {
+        cursor: pointer;
+        transition: 0.22s background-color ease-out;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+            justify-content: center;
+        -ms-flex-direction: column;
+            flex-direction: column;
+        width: 100%;
+        height: 100%;
         font-family: 'Spectral',serif;
-        font-size: 2.2rem;
-        margin: 0 !important;
-        padding: 0 !important; }
-      header #chapters .menuCont .chapt p {
-        color: #000;
-        font-family: 'Spectral',serif; }
+        color: #782200;
+        -ms-flex-line-pack: justify;
+            align-content: space-between;
+        border-bottom: 1px dotted #808080;
+        -ms-flex: 1;
+            flex: 1; }
+        header #chapters .menuCont a .chapt:hover {
+          background-color: rgba(244, 222, 179, 0.8); }
+        header #chapters .menuCont a .chapt h2 {
+          font-family: 'Spectral',serif;
+          font-size: 2.2rem;
+          margin: 0 !important;
+          padding: 0 !important; }
+        header #chapters .menuCont a .chapt p {
+          color: #000;
+          font-family: 'Spectral',serif; }
 
 #slideout {
   width: 100vw;
