@@ -72,7 +72,7 @@ header {
     }
     .titlesCont {
       display: flex;
-      width: 280px;
+      width: 388px;
       justify-content: space-between;
     }
     a.hed-title {
@@ -81,6 +81,7 @@ header {
       font-weight: 700;
       border-left: 1px solid $black;
       padding: 4px 0 0 20px;
+      min-width: 240px;
 
       @include for-size(phone-only) {
         display: none;
@@ -182,6 +183,7 @@ header {
         width: 100%;
         z-index: -1;
         transition: 0.24s all ease-out;
+        left: 0;top: 0;
       }
 
       h2 {
@@ -212,7 +214,7 @@ header {
       letter-spacing:0.09rem;
       font-size: 1.8rem;
       font-style: oblique;
-      font-family:'MillerDisplay-Roman',serif;
+      font-family:'MillerDisplay-Italic',serif;
       margin-top:30px
      }
 
@@ -248,10 +250,12 @@ header {
             margin: 0 !important;
             padding: 0 !important;
             letter-spacing: 0.07rem;
+            text-transform: uppercase;
           }
           p {
-            color: $black;
+            color: $grey;
             font-family:'BentonSansCond-Medium',sans-serif;
+            // text-transform: uppercase;
           }
         } 
       } // end chap
