@@ -5,6 +5,7 @@ $(document).ready(function() {
 	var galImg;
 	var progress = $('progress');
 	var galBtn = $('.gallery-btn');
+	var moreIcon = $('.more-icon');
 
 	var galleryObj = {
 		"gal-drawings" : {
@@ -111,6 +112,10 @@ $(document).ready(function() {
 	$(document).on('scroll', function() {
 	  value = $(window).scrollTop();
 	  progress.attr('value', value);
+	  var min = 0,max=300;
+	  if (value > min && value <= max) {
+	  	$('.hed-img').css('opacity',(value-max)/(min-max));
+	  }
 	});
 
 

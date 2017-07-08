@@ -70,25 +70,22 @@ header {
           width: 100%;
         }
     }
-
     .titlesCont {
       display: flex;
       width: 280px;
       justify-content: space-between;
     }
-
     a.hed-title {
-      font-family: 'Spectral',serif;
+      font-family: 'MillerDisplay-Roman',serif;
       font-size:1.6rem;
       font-weight: 700;
       border-left: 1px solid $black;
-      padding-left: 20px;
+      padding: 4px 0 0 20px;
 
       @include for-size(phone-only) {
         display: none;
       }
     }
-
     .navCont {
       width:220px;
       height: 100%;
@@ -98,7 +95,7 @@ header {
       font-size: 1.2rem;
 
       @include for-size(phone-only) {
-          width: 140px;
+          width: 200px;
       }
 
       .socialCont {
@@ -195,7 +192,7 @@ header {
       h3.byline {
         color: $deepred;
         margin: 20px 0 0 0;
-        font-family: 'Spectral',serif;
+        font-family: 'MillerDisplay-Roman',serif;
         font-size: 1.6rem;
       }
 
@@ -215,7 +212,7 @@ header {
       letter-spacing:0.09rem;
       font-size: 1.8rem;
       font-style: oblique;
-      font-family:'Spectral',serif;
+      font-family:'MillerDisplay-Roman',serif;
       margin-top:30px
      }
 
@@ -223,9 +220,9 @@ header {
         display: flex;
         flex-direction: column; 
         height: 60vh;
-        margin-top:5px;
+        margin-top:5px; 
 
-      a{
+      a {
         flex: 1;
         .chapt {
           cursor: pointer;
@@ -235,7 +232,7 @@ header {
           flex-direction: column;
           width: 100%;
           height: 100%;
-          font-family:'Spectral',serif;
+          font-family:'MillerDisplay-Roman',serif;
           color: $deepred;
           align-content: space-between;
           border-bottom: 1px dotted $grey;
@@ -246,7 +243,7 @@ header {
             background-color: rgba(244,222,179,0.8);
           }
           h2 {
-            font-family:'Spectral',serif;
+            font-family:'MillerDisplay-Roman',serif;
             font-size: 2rem;
             margin: 0 !important;
             padding: 0 !important;
@@ -256,9 +253,20 @@ header {
             color: $black;
             font-family:'BentonSansCond-Medium',sans-serif;
           }
-      } 
+        } 
       } // end chap
-      
+     
+     @include for-height(small-phone-only) {
+      height: 50vh;
+      margin-top: 0;
+      a .chapt h2 {
+        font-size:1.8rem;
+      }
+      a .chapt p {
+        font-size: 1.3rem;
+      }
+     }
+
     } // end menuCont
 
   } //end #chapters

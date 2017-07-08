@@ -39,3 +39,22 @@ p,div {
   margin-left: -50vw !important;
   margin-right: -50vw !important;
 }
+.more-icon {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(0,0,0,0.65);
+  color:#fff;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 6rem;
+  left: calc(50vw - 18px);
+  img {
+    width: 24%;
+    height: auto;
+    transform:rotate(90deg);
+    margin: 2px 0 0 1px;
+  }
+}

@@ -41,6 +41,30 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+  font-family: 'MillerDisplay-Light';
+  src: url('/fonts/MillerDisplay-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MillerDisplay-Roman';
+  src: url('/fonts/MillerDisplay-Roman.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MillerDisplay-SemiboldItalic';
+  src: url('/fonts/MillerDisplay-SemiboldItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MillerDisplay-Italic';
+  src: url('/fonts/MillerDisplay-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @import url('https://fonts.googleapis.com/css?family=Spectral:400,600,600i');
 
