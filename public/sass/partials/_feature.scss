@@ -82,34 +82,80 @@
 	}
 
 	.gallery-btn {
-		width: 140px;
-		height:60px;
+		width: 240px;
+		height:100px;
 		border: 3px solid $black;
 		cursor: pointer;
-		padding: 0 10px;
+		background-color: $black;
 		transition: 0.15s all ease-out;
 		border-radius: 15px;
+		overflow: hidden;
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
+		align-items: flex-start;
 		margin: 60px auto 60px auto; 
 
 		&:hover {
 			border-color: $deepred;
-			width: 160px;
-			padding: 0;
+			background-color: $deepred;
 		}
 
-		p {
-			text-align: center;
-			font-family: 'BentonSansCond-Regular',sans-serif;
-			font-size:1.1rem;
-			user-select: none;
-			margin: 0;
-
-			@include for-size(phone-only) {
-				padding: 10px 0;
+		.imgCont {
+			width: 85px;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: 300%;
+			background-position: center;
+			&.drawings {
+				background-image: url(../images/art/gal-drawings/drawing0.jpg);
+			}
+			&.zataari {
+				background-image: url(../images/art//gal-zataari.png);
 			}
 		}
+
+		img {
+			width: 40px;
+			height: auto;
+			padding-top:10px;
+			padding-right: 10px;
+			box-sizing: border-box;
+		}
+
+		.galCont {
+			display: flex;
+			justify-content: center;
+			flex-flow:column;
+			color: #fff;
+			transition: 0.15s color ease-out;
+			p {
+				margin: 0 0 0 15px;
+				width: 80% !important;
+			}
+			height: 100%;
+			p.title {
+				font-family: 'BentonSansCond-Bold',sans-serif;
+				font-size:1.82rem;
+				//color: $deepred;
+			}
+
+			p.desc {
+				font-family: 'BentonSansCond-Regular',sans-serif;
+				//color: $grey;
+				font-size:1.1rem;
+				user-select: none;
+				line-height: 1.3rem;
+
+				@include for-size(phone-only) {
+					padding: 10px 0;
+				}
+			}
+			&:hover {
+				color: $lightyellow;
+			}
+			
+		}
+
 
 		@include for-size(desktop-up) {
 			margin: 0;
@@ -291,7 +337,6 @@
 				line-height: 2.6rem;
 				letter-spacing: 0.05rem;
 				text-align: center;
-				font-style: italic;
 				// left: calc(50vw - 300px);
 				// width: 65%;
 				max-width:600px;
@@ -371,8 +416,7 @@
 		}
 
 		&.endCred {
-			font-style: italic;
-			font-family: 'MillerDisplay-Roman',serif;
+			font-family: 'MillerDisplay-Italic',serif;
 			color: $grey;
 			margin-top: 60px;
 
@@ -402,7 +446,6 @@
 		margin-bottom: 60px;
 		margin-top: 60px;
 		font-weight: 600;
-		font-style: oblique;
 		background-image: url(../images/art/pq.png);
 		background-repeat: no-repeat;
 		background-position: center;
