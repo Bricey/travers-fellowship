@@ -4,4 +4,5 @@ node_modules/
 .idea
 haters/
 variables.env
+gulpfile.js
 travers-test

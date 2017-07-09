@@ -118,6 +118,28 @@ $(document).ready(function() {
 	  }
 	});
 
+	// scaleToFill() for fullpage video background
+	//scaleToFill();
+	$('.video video').on('loadeddata',scaleToFill);
+
+	function scaleToFill() {
+		$('.video video').each(function(i,videoTag) {
+			var $video = $(videoTag),
+			videoRatio = videoTag.videoWidth / videoTag.videoHeight,
+			tagRatio = $video.width() / $video.height(),
+			val;
+			console.log($video);
+			console.log(videoTag);
+
+			if (videoRatio < tagRatio) {
+				val = tagRatio / videoRatio * 1.02;
+			} else if (tagRatio < videoRatio) {
+				val = videoRatio / tagRatio * 1.02;
+			}
+
+			$video.css('transform','scale('+val+','+val+')');
+		});
+	}
 
 	// window on resize controls
 
@@ -131,4 +153,5 @@ $(document).ready(function() {
 		value = $(window).scrollTop();
 		$(progress).attr('value', value);	
 	});
+	scaleToFill();
 });
