@@ -24,7 +24,7 @@ $(document).ready(function() {
 	if (iOS()) {
 		$('.bgFallback').show();
 		$('#intro').css('background-attachment','scroll');
-		$('.ft-img').css('background-attachment','scroll !important');
+		$('.ft-img').css({'background-attachment':'scroll !important','background-size':'100% auto'});
 	} else {
 		$('.bgFallback').remove();
 	}
