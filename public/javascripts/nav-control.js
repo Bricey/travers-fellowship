@@ -22,7 +22,7 @@ $(document).ready(function() {
 	});
 
 	// check if ios for background:cover fix
-	if (!iOS()) $('.bgFallback').remove();
+	if (iOS()) $('.bgFallback').css('display','inline');
 	
 	function iOS() {
 

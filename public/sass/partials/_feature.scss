@@ -178,7 +178,7 @@
 			background-size: cover;
 			background-position: center;
 			overflow: hidden;
-			opacity: 0.45;
+			opacity: 0.75;
 
 		&.ft1{
 			background-image: url(../images/art/lebanon-street-ft.jpg);
@@ -188,6 +188,9 @@
 		}
 		&.ft3 {
 			background-image: url(../images/art/amman-street-ft.jpg);
+		}
+		&.ft4 {
+			background-image: url(../images/art/bg-camp.jpg);
 		}
 
 		@include for-size(phone-only) {
@@ -379,6 +382,7 @@
 				font-family: 'MillerDisplay-Roman',serif;
 				font-size: 2rem;
 				text-align: center;
+				letter-spacing:0.3px;
 				color: $deepred;
 				font-weight: 700;
 				background-color: rgba(255,255,255,0.8);
@@ -556,6 +560,9 @@
 			width: 100px;
 			height: auto;			
 			padding: 0;
+			&.w {
+				width: 180px;
+			}
 		}
 
 		@include for-size(desktop-up) {
@@ -567,6 +574,9 @@
 			img {
 				width: auto;
 				height: auto;
+				&.w {
+					width: auto;
+				}
 			}
 		}
 	}

@@ -59,9 +59,8 @@ p,div {
   }
 }
 
-.hed-img {
-  overflow: hidden;
   .bgFallback {
+    display: none;
     position: fixed;
     top: -50%;
     left: -50%;
@@ -76,4 +75,3 @@ p,div {
       min-height: 50%;
     }
   }
-}

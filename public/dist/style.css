@@ -56,23 +56,22 @@ p, div {
         transform: rotate(90deg);
     margin: 2px 0 0 1px; }
 
-.hed-img {
-  overflow: hidden; }
-  .hed-img .bgFallback {
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%; }
-    .hed-img .bgFallback img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      min-width: 50%;
-      min-height: 50%; }
+.bgFallback {
+  display: none;
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%; }
+  .bgFallback img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%; }
 
 .landingLogo {
   display: block;
@@ -212,10 +211,10 @@ header {
         -ms-flex-line-pack: center;
             align-content: center; }
         header #headerCont .navCont a.menu img {
-          width: 22px;
+          width: 12px;
           height: auto; }
         header #headerCont .navCont a.menu:after {
-          content: '';
+          content: 'Profiles';
           margin-left: 7px; }
           @media (max-width: 599px) {
             header #headerCont .navCont a.menu:after {
@@ -257,9 +256,12 @@ header {
         left: 0;
         top: 0; }
       header #menu .featureLink h2 {
+        font-family: 'MillerDisplay-Light',sans-serif;
         color: #000;
         margin: 0;
-        transition: 0.16s color ease-out; }
+        transition: 0.16s color ease-out;
+        letter-spacing: 0.5px;
+        font-size: 4.6rem; }
       header #menu .featureLink h3.byline {
         color: #782200;
         margin: 20px 0 0 0;
@@ -474,13 +476,15 @@ header {
     background-size: cover;
     background-position: center;
     overflow: hidden;
-    opacity: 0.45; }
+    opacity: 0.75; }
     .feature .ft-img.ft1 {
       background-image: url(b9cb56c8ec9148e08aa7abd50a536ad0.jpg); }
     .feature .ft-img.ft2 {
       background-image: url(863c39cf000b851b4f44ac4622831444.jpg); }
     .feature .ft-img.ft3 {
       background-image: url(066fedf7613b772a90947688697f40ae.jpg); }
+    .feature .ft-img.ft4 {
+      background-image: url(a24725f1a9bdf2e1fa65cd002c15cc9b.jpg); }
     @media (max-width: 599px) {
       .feature .ft-img {
         height: 300px; } }
@@ -617,6 +621,7 @@ header {
         font-family: 'MillerDisplay-Roman',serif;
         font-size: 2rem;
         text-align: center;
+        letter-spacing: 0.3px;
         color: #782200;
         font-weight: 700;
         background-color: rgba(255, 255, 255, 0.8);
@@ -754,6 +759,8 @@ header {
       width: 100px;
       height: auto;
       padding: 0; }
+      .feature .locatorMap img.w {
+        width: 180px; }
     @media (min-width: 1200px) {
       .feature .locatorMap {
         float: left;
@@ -763,7 +770,9 @@ header {
         height: auto; }
         .feature .locatorMap img {
           width: auto;
-          height: auto; } }
+          height: auto; }
+          .feature .locatorMap img.w {
+            width: auto; } }
   .feature footer {
     height: 240px;
     margin-top: 120px;
@@ -1017,6 +1026,15 @@ p b {
   #profiles article {
     max-width: 940px;
     margin: 0 auto; }
+    #profiles article:after {
+      content: '';
+      background-image: url(133d4d83219e66c5a9e549867e095313.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 80px auto;
+      margin-top: 60px;
+      margin-top: 120px;
+      width: 100%; }
     #profiles article p {
       font-size: 1.4rem;
       margin-bottom: 20px; }
@@ -1026,6 +1044,42 @@ p b {
     @media (max-width: 939px) {
       #profiles article {
         padding: 0 15px 0 15px; } }
+    #profiles article .pq {
+      width: 80%;
+      font-family: 'MillerDisplay-Italic',serif;
+      color: #cc6a3a;
+      font-size: 3.4rem;
+      margin: 0 auto;
+      margin-bottom: 60px;
+      margin-top: 60px;
+      font-weight: 600;
+      position: relative;
+      background-image: none !important; }
+      #profiles article .pq .pq-bg {
+        opacity: 0.34;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(1caaa1cc3ec906d44489bfdad894ad3f.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 70px auto; }
+      #profiles article .pq .pq-cont {
+        min-height: 100px;
+        padding-top: 35px;
+        width: 100%;
+        text-align: center;
+        max-width: 940px;
+        margin: 0 auto; }
+      @media (max-width: 599px) {
+        #profiles article .pq {
+          font-size: 2.6rem;
+          margin: 0 auto;
+          margin-bottom: 60px;
+          line-height: 3.2rem;
+          box-sizing: initial; } }
     #profiles article #intro-block {
       width: 100vw;
       height: 100vh;
@@ -1059,7 +1113,7 @@ p b {
       #profiles article #intro.fatima {
         background-image: url(307f739fe5d0f019af8314455f658a72.jpg); }
       #profiles article #intro.mohammed {
-        background-image: url(9c8f9c45137a70a5c0cacfc237e1c27f.jpg); }
+        background-image: url(181b951df7d650768642e90e654193c6.jpg); }
       #profiles article #intro.wadad {
         background-image: url(c4c0002ec8675fa764206e5eea6e9eff.jpg); }
       #profiles article #intro.abid {

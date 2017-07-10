@@ -126,11 +126,11 @@ header {
         align-content: center;
       &.menu {
         img {
-          width: 22px;
+          width: 12px;
           height: auto;
         }
         &:after {
-          content: '';
+          content: 'Profiles';
           margin-left: 7px;
 
           @include for-size(phone-only) {
@@ -187,9 +187,12 @@ header {
       }
 
       h2 {
+        font-family: 'MillerDisplay-Light',sans-serif;
         color: $black;
         margin: 0;
         transition: 0.16s color ease-out;
+        letter-spacing:0.5px;
+        font-size:4.6rem;
       }
       h3.byline {
         color: $deepred;
