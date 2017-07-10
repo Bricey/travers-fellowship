@@ -305,6 +305,29 @@
 				}
 
 			}
+			@include for-height(small-phone-only) {
+				padding-top: 70px;
+				
+				h1 {
+					&.the {
+						font-size: 3.2rem;
+					}
+					&.greatest {
+						font-size: 3rem;
+					}
+					&.exodus {
+						//margin-top:-16px;
+					}
+					&.of {
+						font-size: 2.8rem;
+					}
+					&.gen {
+						font-size: 3.4rem;
+						margin-top: -9.6px;
+					}
+				}
+
+			}
 		}
 		.ds {
 			box-shadow: 0 1px 12px rgba(0,0,0,0.55);
@@ -687,15 +710,47 @@
 			text-align:center;
 			color:rgb(0,0,0);
 		}
+		.ph-ankara {
+			left:34.6%;
+		}
+		.ph-beirut {
+			left:35.5674%;
+		}
+		.ph-amman {
+			left:42.8014%;
+		}
 		@include for-size(full-width-down) {
 			.dis940 {
 				display: none;
+			}
+			.ph-amman {
+				left:46%;
 			}
 		}
 
 		@include for-size(phone-only) {
 			.disP {
 				display: none;
+			}
+			.ph-ankara {
+				left: 28%;
+			}
+			.ph-beirut {
+				left: 9%;
+			}
+			.ph-amman {
+				left:42%;
+			}
+		}
+		@include for-size(small-phone-only) {
+			.ph-ankara {
+				left: 5%;
+			}
+			.ph-beirut {
+				left: 12%;
+			}
+			.ph-amman {
+				left:34%;
 			}
 		}
 	}

@@ -44,6 +44,11 @@
 				font-family:'BentonSansCond-Medium',sans-serif;
 				font-size:1.1rem;
 				text-shadow:0 2px rgba(0,0,0,0.8);
+
+				@include for-size(phone-only) {
+					top: 55px;
+					font-size:0.9rem;
+				}
 			}
 			&.khalil {
 				background-image: url(../images/art/beqaa-camp-mud.jpg);
@@ -61,20 +66,54 @@
 				background-image: url(../images/art/bg-abid.jpg);
 			}
 			.text {
+				overflow: hidden;
 				padding: 100px 0 0 15px;
 				width: 70% !important;
-				h1 {
-					font-family:'MillerDisplay-Roman',serif;
-					font-size: 5rem;
-					padding: 0;
-					margin: 0;
-					letter-spacing: 0.11rem;
-				}
-				h2 {
-					font-family:'BentonSansCond-Medium',sans-serif;
-					font-size: 1.4rem;
-					letter-spacing: 0.85rem;
-					margin: 0 0 30px 0;
+				.introParagraph {
+					padding: 20px 0 20px 15px;
+					width:80%;
+					background-color: rgba(0,0,0,0.8);
+					border-top: 3px solid $lightgrey;
+					position: absolute;
+					top:90px;left:0;
+					h1 {
+						font-family:'MillerDisplay-Roman',serif;
+						font-size: 5rem;
+						padding: 0;
+						margin: 0;
+						letter-spacing: 0.11rem;
+					}
+					h2 {
+						font-family:'BentonSansCond-Medium',sans-serif;
+						font-size: 1.4rem;
+						letter-spacing: 0.85rem;
+						margin: 0 0 30px 0;
+						color: $grey;
+						text-transform: uppercase;
+					}
+					p span {
+						color: $deepred;
+						float: left;
+						font-weight: 700;
+						font-size: 4.6rem;
+						line-height: 50px;
+						padding-right: 8px;
+						padding-top:3px;
+						padding-left: 0px;
+						margin-bottom:-10px;
+						font-family: 'MillerDisplay-Light',serif;
+					}
+					p:last-child:after {
+						content: 'Continued below...';
+						font-family:'BentonSans-RegularItalic',sans-serif;
+						font-size: 1.1rem;
+						text-align: center;
+						margin-top: 0 auto;
+						margin-top:30px;
+						display: block;
+						color: $lightgrey;
+					}
+					
 				}
 
 				&.bg-gradient {
@@ -87,7 +126,7 @@
 					background: linear-gradient(to right, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%);
 					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
 
-					p, * {
+					p, *:not(span) {
 						text-shadow: 0 0 2px rgba(0,0,0,0.6);
 						width: 70%;
 					}
@@ -96,18 +135,24 @@
 					width: 95% !important;
 				}
 				@include for-size(phone-only) {
-					h1 {
-						font-size: 4rem;
-					}
-					h2 {
-						font-size: 1.3rem;
+					.introParagraph {
+						width: 100%;
+						h1 {
+							font-size: 4rem;
+						}
+						h2 {
+							font-size: 1.3rem;
+						}
+						p:last-child:after {
+							display: none;
+						}
 					}
 					&.bg-gradient {
 						width: 100%;
 						background: -moz-linear-gradient(left, rgba(0,0,0,0.85) 40%, rgba(0,0,0,0) 100%);
 						background: -webkit-linear-gradient(left, rgba(0,0,0,0.85) 40%,rgba(0,0,0,0) 100%);
 						background: linear-gradient(to right, rgba(0,0,0,0.85) 40%,rgba(0,0,0,0) 100%);
-						p,* {
+						p,*:not(span) {
 							width: 90%;
 						}
 					}
