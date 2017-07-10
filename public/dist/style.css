@@ -489,7 +489,8 @@ header {
     background-size: cover;
     background-position: center;
     overflow: hidden;
-    opacity: 0.75; }
+    opacity: 0.75;
+    position: relative; }
     .feature .ft-img.ft1 {
       background-image: url(b9cb56c8ec9148e08aa7abd50a536ad0.jpg); }
     .feature .ft-img.ft2 {
@@ -498,6 +499,14 @@ header {
       background-image: url(066fedf7613b772a90947688697f40ae.jpg); }
     .feature .ft-img.ft4 {
       background-image: url(a24725f1a9bdf2e1fa65cd002c15cc9b.jpg); }
+      .feature .ft-img.ft4 p.caption {
+        font-family: 'BentonSansCond-Medium','Arial','Helvetica',sans-serif;
+        font-size: 1.1rem;
+        padding-right: 15px;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        margin: 0 5px 5px 0; }
     @media (max-width: 599px) {
       .feature .ft-img {
         height: 300px; } }
@@ -1060,7 +1069,7 @@ p b {
           padding: 0 15px; } }
     #profiles article p.credit:after {
       content: '\2014   Michael Petrou';
-      margin-top: 20px;
+      margin-top: 40px;
       display: block;
       color: #cccdcd;
       text-transform: uppercase;
@@ -1220,12 +1229,12 @@ p b {
             #profiles article #intro .text.bg-gradient p, #profiles article #intro .text.bg-gradient *:not(span) {
               width: 90%; } }
     #profiles article footer {
-      height: 260px;
+      height: 220px;
       width: 100%;
       background-image: url(133d4d83219e66c5a9e549867e095313.png);
       background-repeat: no-repeat;
-      background-size: 75px auto;
-      background-position: center; }
+      background-size: 90px auto;
+      background-position: 50% 35%; }
       @media (max-width: 599px) {
         #profiles article footer {
           height: 180px; } }

@@ -19,7 +19,7 @@
 
 		p.credit:after {
 			content: '— Michael Petrou';
-			margin-top: 20px;
+			margin-top: 40px;
 			display: block;
 			color: $lightgrey;
 			text-transform: uppercase;
@@ -221,13 +221,12 @@
 		}
 
 		footer {
-			height: 260px;
+			height: 220px;
 			width: 100%;
 			background-image: url(../images/art/syria-stamp.png);
 			background-repeat: no-repeat;
-			background-size: 75px auto;
-			background-position: center;
-
+			background-size: 90px auto;
+			background-position: 50% 35%;
 			@include for-size(phone-only) {
 				height: 180px;
 			}

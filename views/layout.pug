@@ -1,10 +1,17 @@
 doctype html
 html
   head
-    title= `${title} | ${h.siteName}`
+    title= `${h.siteName}`
     link(rel='stylesheet', href='/dist/style.css')
     link(rel="shortcut icon" type="image/png" href="/images/icons/np_logo_outline.png")
     meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(property='og:image', content='/images/art/social-img.jpg')
+    meta(property='og:image:secure_url', content='/images/art/social-img.jpg')
+    meta(name="twitter:card", content="summary_large_image")
+    meta(name="twitter:site", content="@nationalpost")
+    meta(name="twitter:title", content="The Greatest Exodus of our Time")
+    meta(name="twitter:description", content="The emptying of Syria is the greatest forced migration of humanity in modern times. Millions of individually shattered lives will reshape the Middle East — and the world beyond — for generations to come. By: Michael Petrou")
+    meta(name="twitter:image", content="images/art/social-img.jpg")
     script(type='text/javascript' src="javascripts/jquery-min.js")
     script(type='text/javascript' src="javascripts/jquery.lazyload.min.js")
     script(type='text/javascript' src="javascripts/nav-control.js")
@@ -20,7 +27,7 @@ html
               |EXODUS
           div.navCont.vc
             div.socialCont.vc
-              a(href='#')   
+              a(href=`http://www.facebook.com/share.php?title=The Greatest Exodus of our Time` target="_blank")   
                 img(src='/images/icons/ico_facebook.svg' alt='facebook')
               //- a(href='#')
               //-   img(src='/images/icons/ico_twitter.svg' alt='twitter')

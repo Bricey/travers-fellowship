@@ -179,6 +179,7 @@
 			background-position: center;
 			overflow: hidden;
 			opacity: 0.75;
+			position: relative;
 
 		&.ft1{
 			background-image: url(../images/art/lebanon-street-ft.jpg);
@@ -190,6 +191,14 @@
 			background-image: url(../images/art/amman-street-ft.jpg);
 		}
 		&.ft4 {
+			p.caption {
+				font-family: 'BentonSansCond-Medium','Arial','Helvetica',sans-serif;
+				font-size:1.1rem;
+				padding-right:15px;
+				bottom:0;right:0;
+				position: absolute;
+				margin: 0 5px 5px 0;
+			}
 			background-image: url(../images/art/bg-camp.jpg);
 		}
 
