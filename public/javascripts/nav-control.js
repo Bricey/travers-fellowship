@@ -2,7 +2,7 @@ $(document).ready(function() {
 	var targetMenu = $('.navCont a.btn');
 
 	//add url for Facebook share link
-	$('a.fb').attr("href","https://www.facebook.com/share.php?u="+ window.location.href +"title=The Greatest Exodus of our Time");
+	$('a.fb').attr("href","https://www.facebook.com/share.php?u="+ encodeURIComponent(location.href) +"title=The Greatest Exodus of our Time");
 	
 	targetMenu.on('click',function(e) {
 		e.preventDefault();
