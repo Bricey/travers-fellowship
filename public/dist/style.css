@@ -281,7 +281,7 @@ header {
             transform: scale(1.08); }
     header #menu h5 {
       text-align: center;
-      color: #808080;
+      color: #444;
       letter-spacing: 0.09rem;
       font-size: 1.8rem;
       font-style: oblique;
@@ -388,6 +388,18 @@ header {
     .feature {
       margin: 0 auto;
       padding: 0; } }
+  .feature p.standfirst {
+    font-family: 'MillerDisplay-Italic',Georiga,serif;
+    color: #808080;
+    margin-top: 120px !important;
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 80%;
+    letter-spacing: 0.9px; }
+    .feature p.standfirst b {
+      font-family: 'MillerDisplay-Bold';
+      font-style: oblique; }
   .feature h1 {
     width: calc(100% - 30px);
     max-width: 940px;
@@ -658,7 +670,7 @@ header {
     width: 100%;
     margin-bottom: 20px; }
     .feature p.first {
-      margin-top: 160px !important; }
+      margin-top: 60px !important; }
       @media (max-width: 599px) {
         .feature p.first {
           margin-top: 80px !important; } }
@@ -1068,14 +1080,14 @@ p b {
         #profiles article p {
           padding: 0 15px; } }
     #profiles article p.credit:after {
-      content: '\2014   Michael Petrou';
+      content: "\2014  By Michael Petrou, as part of the 2017 R. James Travers Foreign Corresponding Fellowship";
       margin-top: 40px;
       display: block;
-      color: #cccdcd;
-      text-transform: uppercase;
+      color: #808080;
       letter-spacing: 1px;
       font-size: 1.2rem;
-      font-family: 'BentonSans-Medium','Arial','Helvetica',sans-serif; }
+      font-style: oblique;
+      font-family: 'BentonSans-RegularItalic','Arial','Helvetica',sans-serif !important; }
     #profiles article .pq {
       width: 80%;
       font-family: 'MillerDisplay-Italic',serif;

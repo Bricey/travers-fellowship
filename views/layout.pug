@@ -5,13 +5,17 @@ html
     link(rel='stylesheet', href='/dist/style.css')
     link(rel="shortcut icon" type="image/png" href="/images/icons/np_logo_outline.png")
     meta(name="viewport" content="width=device-width, initial-scale=1")
-    meta(property='og:image', content='/images/art/social-img.jpg')
-    meta(property='og:image:secure_url', content='/images/art/social-img.jpg')
+    meta(property="og:url", content="http://travers-test.herokuapp.com")
+    meta(property="fb:app_id" content="1273509809437610")
+    meta(property="og:type", content="article")
+    meta(property="og:title", content="The Greatest Exodus of Our Time")
+    meta(property="og:description", content="The emptying of Syria is the greatest forced migration of humanity in modern times.")
+    meta(property="og:image", content="http://travers-test.herokuapp.com/images/art/social-img.jpg")
     meta(name="twitter:card", content="summary_large_image")
     meta(name="twitter:site", content="@nationalpost")
     meta(name="twitter:title", content="The Greatest Exodus of our Time")
     meta(name="twitter:description", content="The emptying of Syria is the greatest forced migration of humanity in modern times. Millions of individually shattered lives will reshape the Middle East — and the world beyond — for generations to come. By: Michael Petrou")
-    meta(name="twitter:image", content="images/art/social-img.jpg")
+    meta(name="twitter:image", content="http://travers-test.herokuapp.com/images/art/social-img.jpg")
     script(type='text/javascript' src="javascripts/jquery-min.js")
     script(type='text/javascript' src="javascripts/jquery.lazyload.min.js")
     script(type='text/javascript' src="javascripts/nav-control.js")
@@ -27,11 +31,11 @@ html
               |EXODUS
           div.navCont.vc
             div.socialCont.vc
-              a(href=`http://www.facebook.com/share.php?title=The Greatest Exodus of our Time` target="_blank")   
+              a.fb(href='#' target="_blank")   
                 img(src='/images/icons/ico_facebook.svg' alt='facebook')
               //- a(href='#')
               //-   img(src='/images/icons/ico_twitter.svg' alt='twitter')
-              a(href='https://twitter.com/share?text=The+Greatest+Exodus+of+our+Time+by+@michaelpetrou,+supported+by+@RJT_Fellowship&via=nationalpost' target="_blank")   
+              a.tw(href='https://twitter.com/share?text=The+Greatest+Exodus+of+our+Time+by+@michaelpetrou,+supported+by+@RJT_Fellowship&via=nationalpost' target="_blank")   
                 img(src='/images/icons/ico_twitter.svg' alt='twitter')
             a.vc.menu.btn(href='#')   
               img(src='/images/icons/chapt.svg' alt='menu')
@@ -41,7 +45,7 @@ html
               div.transBox
               h2 Feature Story
               h3.byline By: Michael Petrou
-          h5 Refugee Profiles
+          h5 Voices of the Exodus
           div.menuCont
             a(href="/khalil")
               div.chapt.vc

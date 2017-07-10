@@ -12,6 +12,7 @@ $yellow: #ffc702;
 $lightred: #cc6a3a;
 $green: #468966;
 $lightyellow: #f2e78c;
+$darkgrey: #444;
 
 @mixin for-height($height) {
   @if $height == small-phone-only {

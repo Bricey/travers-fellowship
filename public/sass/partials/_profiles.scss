@@ -18,14 +18,15 @@
 		}
 
 		p.credit:after {
-			content: '— Michael Petrou';
+			content: "—By Michael Petrou, as part of the 2017 R. James Travers Foreign Corresponding Fellowship";
 			margin-top: 40px;
 			display: block;
-			color: $lightgrey;
-			text-transform: uppercase;
+			color: $grey;
+			// text-transform: uppercase;
 			letter-spacing: 1px;
 			font-size: 1.2rem;
-			font-family: 'BentonSans-Medium','Arial','Helvetica',sans-serif;
+			font-style: oblique;
+			font-family: 'BentonSans-RegularItalic','Arial','Helvetica',sans-serif !important;
 		}
 		// @include for-size(full-width-down) {
 		// 	padding: 0 15px 0 15px;

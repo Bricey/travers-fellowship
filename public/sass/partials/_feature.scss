@@ -50,7 +50,20 @@
 		padding: 0;
 	}
 
-	
+	p.standfirst {
+		font-family: 'MillerDisplay-Italic',Georiga,serif;
+		color: $grey;
+		margin-top: 120px !important;
+		font-size:1.8rem;
+		text-align: center;
+		margin: 0 auto;
+		max-width: 80%;
+		letter-spacing:0.9px;
+		b {
+			font-family: 'MillerDisplay-Bold';
+			font-style: oblique;
+		}
+	}	
 
 	h1 {
 		width: calc(100% - 30px);
@@ -414,7 +427,7 @@
 		// padding: 0 15px;
 
 		&.first {
-			margin-top: 160px !important;
+			margin-top: 60px !important;
 
 			@include for-size(phone-only) {
 				margin-top: 80px !important;
