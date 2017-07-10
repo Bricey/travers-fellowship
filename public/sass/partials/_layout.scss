@@ -59,10 +59,8 @@ p,div {
   }
 }
 
-.hed-img, article #intro {
+.hed-img  {
   overflow: hidden;
-}
-
   .bgFallback {
     display: none;
     position: fixed;
@@ -79,3 +77,4 @@ p,div {
       min-height: 50%;
     }
   }
+}
