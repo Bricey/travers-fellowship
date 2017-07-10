@@ -115,6 +115,7 @@ $(document).ready(function() {
 	  var min = 0,max=300;
 	  if (value > min && value <= max) {
 	  	$('.hed-img').css('opacity',(value-max)/(min-max));
+	  	$('.bgFallback').css('opacity',(value-max)/(min-max));
 	  }
 	});
 
@@ -140,6 +141,9 @@ $(document).ready(function() {
 			$video.css('transform','scale('+val+','+val+')');
 		});
 	}
+
+	//lazy load code
+	$('img.lazy').lazyload();
 
 	// window on resize controls
 
