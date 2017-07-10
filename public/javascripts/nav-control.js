@@ -22,9 +22,9 @@ $(document).ready(function() {
 
 	// check if ios for background:cover fix
 	if (iOS()) {
+		alert('true');
 		$('.bgFallback').show();
 		$('#intro').css('background-attachment','scroll');
-		$('.ft-img').css({'background-attachment':'scroll !important','background-size':'100% auto'});
 	} else {
 		$('.bgFallback').remove();
 	}

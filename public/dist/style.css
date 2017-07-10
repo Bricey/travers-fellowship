@@ -526,6 +526,9 @@ header {
     @media (max-width: 599px) {
       .feature .ft-img {
         height: 300px; } }
+    @media (max-width: 939px) {
+      .feature .ft-img {
+        background-attachment: scroll; } }
     .feature .ft-img.video {
       overflow: hidden;
       display: -ms-flexbox;
