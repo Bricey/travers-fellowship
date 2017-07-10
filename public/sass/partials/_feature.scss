@@ -455,8 +455,8 @@
 	}
 
 	.pq {
-		max-width: 100%;
-		width: calc(100% - 30px);
+		//max-width: 80%;
+		width: 80%;
 		font-family:'MillerDisplay-Italic',serif;
 		color: $deepred;
 		font-size: 3.4rem;
@@ -480,9 +480,11 @@
 
 		@include for-size(phone-only) {
 			font-size: 2.6rem;
-			margin: 45px 0 60px 0;
+			margin: 0 auto;
+			margin-bottom: 60px;
 			line-height: 3.2rem;
 			box-sizing: initial;
+			width: 100%;
 		}
 	}
 

@@ -673,8 +673,7 @@ header {
     background-size: 12px;
     background-position: center; }
   .feature .pq {
-    max-width: 100%;
-    width: calc(100% - 30px);
+    width: 80%;
     font-family: 'MillerDisplay-Italic',serif;
     color: #782200;
     font-size: 3.4rem;
@@ -696,9 +695,11 @@ header {
     @media (max-width: 599px) {
       .feature .pq {
         font-size: 2.6rem;
-        margin: 45px 0 60px 0;
+        margin: 0 auto;
+        margin-bottom: 60px;
         line-height: 3.2rem;
-        box-sizing: initial; } }
+        box-sizing: initial;
+        width: 100%; } }
   .feature .img-fw {
     width: 100%;
     height: auto; }
