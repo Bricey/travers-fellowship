@@ -59,6 +59,10 @@ p,div {
   }
 }
 
+.hed-img, article #intro {
+  overflow: hidden;
+}
+
   .bgFallback {
     display: none;
     position: fixed;
