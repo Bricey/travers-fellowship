@@ -117,6 +117,9 @@ $(document).ready(function() {
 	  	$('.hed-img').css('opacity',(value-max)/(min-max));
 	  	$('.bgFallback').css('opacity',(value-max)/(min-max));
 	  }
+	  if (value == 0) {
+	  	$('.hed-img').css('opacity',1);
+	  }
 	});
 
 	// scaleToFill() for fullpage video background

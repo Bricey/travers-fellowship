@@ -400,6 +400,10 @@ header {
     .feature p.standfirst b {
       font-family: 'MillerDisplay-Bold';
       font-style: oblique; }
+    @media (max-width: 599px) {
+      .feature p.standfirst {
+        font-size: 1.8rem;
+        line-height: 2.8rem; } }
   .feature h1 {
     width: calc(100% - 30px);
     max-width: 940px;
