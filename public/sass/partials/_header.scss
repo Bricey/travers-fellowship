@@ -124,6 +124,9 @@ header {
         text-decoration: none;
         display: flex;
         align-content: center;
+        @include for-size(phone-only) {
+            width: 36%;
+        }
       &.menu {
         img {
           width: 12px;
@@ -199,6 +202,7 @@ header {
         margin: 20px 0 0 0;
         font-family: 'MillerDisplay-Roman',serif;
         font-size: 1.6rem;
+        letter-spacing: 0.08rem;
       }
 
       &:hover {
@@ -218,14 +222,22 @@ header {
       font-size: 1.8rem;
       font-style: oblique;
       font-family:'MillerDisplay-Italic',serif;
-      margin-top:30px
+      margin: 40px 0 15px 0 !important;
+      &:before {
+        content: '| ';
+        padding-right: 15px;
+      }
+      &:after {
+        content: ' |';
+        padding-left: 15px;
+      }
      }
 
     .menuCont {
         display: flex;
         flex-direction: column; 
         height: 60vh;
-        margin-top:5px; 
+        margin-top:5px;
 
       a {
         flex: 1;

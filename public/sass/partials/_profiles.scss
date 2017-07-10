@@ -3,34 +3,33 @@
 	background-color: $black;
 	color: #fff;
 	font-family:'BentonSans-Regular';
-	padding: 30px 0 100px 0;
+	padding: 30px 0 0 0;
 
 
 	article {
 		max-width: $width;
 		margin: 0 auto;
-
-		&:after {
-			content:'';
-			background-image: url(../images/art/syria-stamp.png);
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: 80px auto;
-			margin-top:60px;
-			margin-top: 120px;
-			width: 100%;
-		}
 		p {
-			font-size: 1.4rem;
+			font-size: 1.5rem;
 			margin-bottom: 20px;
-
 			@include for-size(phone-only) {
-				font-size: 1.35rem;
+				padding: 0 15px;
 			}
 		}
-		@include for-size(full-width-down) {
-			padding: 0 15px 0 15px;
+
+		p.credit:after {
+			content: '— Michael Petrou';
+			margin-top: 20px;
+			display: block;
+			color: $lightgrey;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: 1.2rem;
+			font-family: 'BentonSans-Medium','Arial','Helvetica',sans-serif;
 		}
+		// @include for-size(full-width-down) {
+		// 	padding: 0 15px 0 15px;
+		// }
 		.pq {
 			//max-width: 100%;
 			width: 80%;
@@ -103,6 +102,11 @@
 					font-size:0.9rem;
 				}
 			}
+			.more-icon {
+				@include for-size(phone-only) {
+					bottom: 2rem;
+				}
+			}
 			&.khalil {
 				background-image: url(../images/art/beqaa-camp-mud.jpg);
 			}
@@ -144,8 +148,11 @@
 						color: $grey;
 						text-transform: uppercase;
 					}
+					p {
+						padding: 0 !important;
+					}
 					p span {
-						color: $deepred;
+						color: $lightred;
 						float: left;
 						font-weight: 700;
 						font-size: 4.6rem;
@@ -210,6 +217,19 @@
 						}
 					}
 				}
+			}
+		}
+
+		footer {
+			height: 260px;
+			width: 100%;
+			background-image: url(../images/art/syria-stamp.png);
+			background-repeat: no-repeat;
+			background-size: 75px auto;
+			background-position: center;
+
+			@include for-size(phone-only) {
+				height: 180px;
 			}
 		}
 

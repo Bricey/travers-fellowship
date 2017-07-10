@@ -22,7 +22,12 @@ $(document).ready(function() {
 	});
 
 	// check if ios for background:cover fix
-	if (iOS()) $('.bgFallback').show();
+	if (iOS()) {
+		$('.bgFallback').show();
+		$('#intro').css('background-attachment','scroll');
+	} else {
+		$('.bgFallback').remove();
+	}
 	
 	function iOS() {
 
@@ -43,4 +48,6 @@ $(document).ready(function() {
 
 	  return false;
 	}
+
+	
 });

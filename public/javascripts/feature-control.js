@@ -145,6 +145,11 @@ $(document).ready(function() {
 	//lazy load code
 	$('img.lazy').lazyload();
 
+	// on keypress 'home', return to defaults
+	$(window).keypress(function(e) {
+		if (e.which == 36 || (e.which == 93 && e.which == 38)) $('.hed-img').css('opacity',1);
+	});
+
 	// window on resize controls
 
 	$(window).on('resize',function() {
