@@ -60,7 +60,7 @@
 		position: relative;
 		overflow: hidden;
 		background-repeat: no-repeat;
-		background-size: cover;
+		background-size: 100% auto;
 		background-position: center;
 		transition: 0.2s all ease-out;
 
@@ -90,10 +90,10 @@
 		}
 		&:hover {
 			border-color:$deepred;
-			background-size: 103% auto;
+			background-size: 105% auto;
 			//box-shadow: 0 2px 12px rgba(0,0,0,0.45);
 			a .bgGradient {
-				opacity: 0.7;
+				border-color: $yellow;
 			}
 		}
 		a {
@@ -107,11 +107,30 @@
 				border-radius: 15px;
 				top:0;
 				left: 0;
-				transition: 0.2s opacity ease-out;
+				overflow: hidden;
+				transition: 0.2s border-color ease-out;
 				background: -moz-linear-gradient(left, rgba(0,0,0,0.85) 25%, rgba(0,0,0,0) 92%);
 				background: -webkit-linear-gradient(left, rgba(0,0,0,0.85) 25%,rgba(0,0,0,0) 92%);
 				background: linear-gradient(to right, rgba(0,0,0,0.85) 25%,rgba(0,0,0,0) 92%);
 				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+				.clickIcon {
+					width: 26px;
+					height:80px;
+					transform: rotate(-45deg);
+					position: absolute;
+					right:0;
+					top:-26px;
+					background-color: $black;
+					padding: 6px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					img {
+						width: 100%;
+						height: auto;
+						transform: rotate(45deg);
+					}
+				}
 			}
 			.textCont {
 				width: 100%;
