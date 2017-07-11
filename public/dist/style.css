@@ -281,18 +281,25 @@ header {
             transform: scale(1.08); }
     header #menu h5 {
       text-align: center;
-      color: #444;
+      color: #808080;
       letter-spacing: 0.09rem;
-      font-size: 1.8rem;
+      font-size: 2.6rem;
       font-style: oblique;
-      font-family: 'MillerDisplay-Italic',serif;
-      margin: 40px 0 15px 0 !important; }
+      font-family: 'MillerDisplay-Light',serif;
+      margin: 40px 0 15px 0 !important;
+      text-transform: uppercase;
+      letter-spacing: 0.4rem; }
       header #menu h5:before {
         content: '| ';
         padding-right: 15px; }
       header #menu h5:after {
         content: ' |';
         padding-left: 15px; }
+      @media (max-width: 599px) {
+        header #menu h5 {
+          margin: 30px 0 12px 0 !important;
+          font-size: 2rem;
+          letter-spacing: normal; } }
     header #menu .menuCont {
       display: -ms-flexbox;
       display: flex;

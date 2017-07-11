@@ -217,12 +217,14 @@ header {
 
      h5 {
       text-align: center;
-      color: $darkgrey;
+      color: $grey;
       letter-spacing:0.09rem;
-      font-size: 1.8rem;
+      font-size: 2.6rem;
       font-style: oblique;
-      font-family:'MillerDisplay-Italic',serif;
+      font-family:'MillerDisplay-Light',serif;
       margin: 40px 0 15px 0 !important;
+      text-transform: uppercase;
+      letter-spacing: 0.4rem;
       &:before {
         content: '| ';
         padding-right: 15px;
@@ -230,6 +232,11 @@ header {
       &:after {
         content: ' |';
         padding-left: 15px;
+      }
+      @include for-size(phone-only) {
+          margin: 30px 0 12px 0 !important;
+          font-size:2rem;
+          letter-spacing: normal;
       }
      }
 
