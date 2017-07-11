@@ -396,6 +396,105 @@ header {
     .feature {
       margin: 0 auto;
       padding: 0; } }
+  .feature .voiceThrow {
+    max-width: 360px;
+    height: 120px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    width: 100%;
+    margin: 80px 0 120px 0;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 0.2s all ease-out; }
+    .feature .voiceThrow.right {
+      float: right;
+      margin-left: 60px; }
+    .feature .voiceThrow.left {
+      float: left;
+      margin-right: 60px; }
+    .feature .voiceThrow.vo1 {
+      background-image: url(4a37b7de8f1869af0eb9be6025e6ebbe.jpg); }
+    .feature .voiceThrow.vo2 {
+      background-image: url(dc9635a87eccc6fbf528a93efacdb6c2.jpg); }
+    .feature .voiceThrow.vo3 {
+      background-image: url(391946ffbc9f322eddd7bac583a9dc25.jpg); }
+    .feature .voiceThrow.vo4 {
+      background-image: url(cc96f2b3faf018497ee05ed3f5efcb4f.jpg); }
+    .feature .voiceThrow.vo5 {
+      background-image: url(c3822c4f7e6a57538697901d6d3d93dd.jpg); }
+    .feature .voiceThrow:hover {
+      border-color: #782200;
+      background-size: 103% auto; }
+      .feature .voiceThrow:hover a .bgGradient {
+        opacity: 0.7; }
+    .feature .voiceThrow a {
+      width: 100%;
+      height: 100%; }
+      .feature .voiceThrow a .bgGradient {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        border: 1px solid #fff;
+        border-radius: 15px;
+        top: 0;
+        left: 0;
+        transition: 0.2s opacity ease-out;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 25%, transparent 92%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); }
+      .feature .voiceThrow a .textCont {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer; }
+        .feature .voiceThrow a .textCont p {
+          margin-left: 30px;
+          text-shadow: 0 0 8px rgba(0, 0, 0, 0.7); }
+        .feature .voiceThrow a .textCont p.title {
+          margin-bottom: 2px;
+          padding-top: 15px;
+          color: #E50714;
+          font-family: 'BentonSansCond-Bold','Arial','Helvetica',sans-serif;
+          font-size: 1.15rem; }
+          @media (max-width: 599px) {
+            .feature .voiceThrow a .textCont p.title {
+              padding-top: 8px; } }
+        .feature .voiceThrow a .textCont p.name {
+          font-family: "MillerDisplay-Medium",'Georgia',serif;
+          color: #fff;
+          font-size: 2.6rem;
+          letter-spacing: 0.09rem;
+          margin-top: -6px;
+          margin-bottom: 2px; }
+          @media (max-width: 599px) {
+            .feature .voiceThrow a .textCont p.name {
+              margin-top: -12px;
+              font-size: 2.3rem; } }
+        .feature .voiceThrow a .textCont p.desc {
+          font-family: 'BentonSansCond-Regular','Arial','Helvetica',sans-serif;
+          color: #cccdcd;
+          font-size: 1.4rem;
+          letter-spacing: 0.1rem;
+          margin-top: -12px; }
+          @media (max-width: 599px) {
+            .feature .voiceThrow a .textCont p.desc {
+              font-size: 1.1rem; } }
+    @media (max-width: 599px) {
+      .feature .voiceThrow {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        width: 80%;
+        float: none !important;
+        height: 80px;
+        background-size: cover; }
+        .feature .voiceThrow:hover {
+          background-size: cover; } }
   .feature p.standfirst {
     font-family: 'MillerDisplay-Italic',Georiga,serif;
     color: #808080;
