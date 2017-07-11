@@ -1,18 +1,14 @@
 const express = require('express');
 const session = require('express-session');
-// const mongoose = require('mongoose');
-// const MongoStore = require('connect-mongo')(session);
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const promisify = require('es6-promisify');
-// const flash = require('connect-flash');
 const expressValidator = require('express-validator');
 const routes = require('./routes/index');
 const helpers = require('./helpers');
 const errorHandlers = require('./handlers/errorHandlers');
-//const gs = require('gsap'); 
 
 const app = express();
 
@@ -32,11 +28,6 @@ app.use((req,res,next) => {
 	res.locals.h = helpers;
 	next();
 });
-
-// app.use((req, res, next) => {
-//   req.login = promisify(req.login, req);
-//   next();
-// });
 
 app.use('/',routes);
 app.use(errorHandlers.notFound);
