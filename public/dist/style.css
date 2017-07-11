@@ -424,7 +424,7 @@ header {
     background-attachment: fixed;
     position: absolute; }
     .feature .hed-img.ft1 {
-      background-image: url(6ea8ca3508cb4b00cdd6fc6e0920eef5.jpg); }
+      background-image: url(d68ad247245b760f9bea7a8d16a7f383.jpg); }
     @media (max-width: 599px) {
       .feature .hed-img {
         background-attachment: scroll; } }
@@ -454,9 +454,9 @@ header {
       background-size: 300%;
       background-position: center; }
       .feature .gallery-btn .imgCont.drawings {
-        background-image: url(ae6369e4f51459fd4522cb80e19d62d3.jpg); }
+        background-image: url(f0784eb9334011c8b9da273e8c1647c1.jpg); }
       .feature .gallery-btn .imgCont.zataari {
-        background-image: url(881cecefbd0cad8b3a10737efc5e162e.png); }
+        background-image: url(f252d1ff28e26f8b6b7bf61167e7ff5d.png); }
     .feature .gallery-btn img {
       width: 40px;
       height: auto;
@@ -511,13 +511,13 @@ header {
     opacity: 0.75;
     position: relative; }
     .feature .ft-img.ft1 {
-      background-image: url(b9cb56c8ec9148e08aa7abd50a536ad0.jpg); }
+      background-image: url(9b463f94cdb284e652116c02e94a5c59.jpg); }
     .feature .ft-img.ft2 {
-      background-image: url(863c39cf000b851b4f44ac4622831444.jpg); }
+      background-image: url(792433ceef8a75da97faab5414c54911.jpg); }
     .feature .ft-img.ft3 {
-      background-image: url(066fedf7613b772a90947688697f40ae.jpg); }
+      background-image: url(394f9ed7069c43821b2f61bb3c283147.jpg); }
     .feature .ft-img.ft4 {
-      background-image: url(a24725f1a9bdf2e1fa65cd002c15cc9b.jpg); }
+      background-image: url(ebe3f41000084360fb96afc03597926f.jpg); }
       .feature .ft-img.ft4 p.caption {
         font-family: 'BentonSansCond-Medium','Arial','Helvetica',sans-serif;
         font-size: 1.1rem;
@@ -550,7 +550,7 @@ header {
     height: 100vh;
     margin: 0 auto;
     position: relative;
-    background-image: url(133d4d83219e66c5a9e549867e095313.png);
+    background-image: url(5cfbe38bec965712db05ca65f7998e9c.png);
     background-repeat: no-repeat;
     background-position: center 70px;
     background-size: 100%; }
@@ -731,7 +731,7 @@ header {
     margin-bottom: 60px;
     margin-top: 60px;
     font-weight: 600;
-    background-image: url(1caaa1cc3ec906d44489bfdad894ad3f.png);
+    background-image: url(60ed95df8a3ab17bfe8e7f48c8a38d15.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 70px auto; }
@@ -1116,7 +1116,7 @@ p b {
         position: absolute;
         top: 0;
         left: 0;
-        background-image: url(1caaa1cc3ec906d44489bfdad894ad3f.png);
+        background-image: url(60ed95df8a3ab17bfe8e7f48c8a38d15.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: 70px auto; }
@@ -1165,15 +1165,15 @@ p b {
         #profiles article #intro .more-icon {
           bottom: 2rem; } }
       #profiles article #intro.khalil {
-        background-image: url(1a413e9dc8b66ad1e4a65729133c5172.jpg); }
+        background-image: url(3e85cdb89aaabcee0a8c0dba575cc282.jpg); }
       #profiles article #intro.fatima {
-        background-image: url(307f739fe5d0f019af8314455f658a72.jpg); }
+        background-image: url(d332c5cc7cd8697e0207e26284e2e838.jpg); }
       #profiles article #intro.mohammed {
-        background-image: url(181b951df7d650768642e90e654193c6.jpg); }
+        background-image: url(5fe0df3412d7d449db689a74ff25de11.jpg); }
       #profiles article #intro.wadad {
-        background-image: url(c4c0002ec8675fa764206e5eea6e9eff.jpg); }
+        background-image: url(8e31939fe7e056bcbea0c42e908fcb7c.jpg); }
       #profiles article #intro.abid {
-        background-image: url(9c3570ae37ea43b75c1dab98daf39f40.jpg); }
+        background-image: url(1d4fb4136d8aab27ee42ded0c71156ed.jpg); }
       @media (max-width: 599px) {
         #profiles article #intro {
           background-position: 50% -30%; } }
@@ -1262,7 +1262,7 @@ p b {
     #profiles article footer {
       height: 220px;
       width: 100%;
-      background-image: url(133d4d83219e66c5a9e549867e095313.png);
+      background-image: url(5cfbe38bec965712db05ca65f7998e9c.png);
       background-repeat: no-repeat;
       background-size: 90px auto;
       background-position: 50% 35%; }
