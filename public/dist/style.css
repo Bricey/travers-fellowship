@@ -425,6 +425,9 @@ header {
     position: absolute; }
     .feature .hed-img.ft1 {
       background-image: url(6ea8ca3508cb4b00cdd6fc6e0920eef5.jpg); }
+    @media (max-width: 599px) {
+      .feature .hed-img {
+        background-attachment: scroll; } }
   .feature .gallery-btn {
     width: 240px;
     height: 100px;

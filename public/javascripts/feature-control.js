@@ -110,7 +110,8 @@ $(document).ready(function() {
 	$(progress).attr('value', value);
 
 	// check whether browser is at 600 or more upon load
-	if ($(window).scrollTop <=600) {
+	if ($(window).scrollTop <=400) {
+		$('.bgFallback').css('opacity',0);
 		$('.hed-img').css('opacity',0);
 	}
 
@@ -137,9 +138,6 @@ $(document).ready(function() {
 			videoRatio = videoTag.videoWidth / videoTag.videoHeight,
 			tagRatio = $video.width() / $video.height(),
 			val;
-			console.log($video);
-			console.log(videoTag);
-
 			if (videoRatio < tagRatio) {
 				val = tagRatio / videoRatio * 1.02;
 			} else if (tagRatio < videoRatio) {

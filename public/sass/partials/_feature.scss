@@ -96,6 +96,10 @@
 		&.ft1{
 			background-image: url(../images/art/ft-region-01.jpg);
 		}
+
+		@include for-size(phone-only) {
+			background-attachment: scroll;
+		}
 	}
 
 	.gallery-btn {
