@@ -3,7 +3,7 @@ exports.landingPage = (req,res) => {
 };
 
 exports.mainStory = (req,res) => {
-	res.render('feature',{title:'Syria\'s Refugees'});
+	res.render('feature',{title:'Syrian Exodus'});
 }
 
 exports.profKhalil = (req,res) => {

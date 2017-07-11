@@ -78,17 +78,17 @@ $(document).ready(function() {
 		var gal = galleryObj[d];
 		var totalImages = gal.captions.length-1;
 		var currentSlide = 0;
-		galImg.attr('src','images/art/'+d+"/"+gal.name+currentSlide+".jpg");
+		galImg.attr('src','/images/art/'+d+"/"+gal.name+currentSlide+".jpg");
 
 		$('.back').on('click',function() {
 			if (currentSlide > 0) currentSlide--;
-			galImg.attr('src','images/art/'+d+"/"+gal.name+currentSlide+".jpg");
+			galImg.attr('src','/images/art/'+d+"/"+gal.name+currentSlide+".jpg");
 			adjustImageProportions(galImg);
 		});
 
 		$('.next').on('click',function() {
 			if (currentSlide < totalImages) currentSlide++;
-			galImg.attr('src','images/art/'+d+"/"+gal.name+currentSlide+".jpg");
+			galImg.attr('src','/images/art/'+d+"/"+gal.name+currentSlide+".jpg");
 			adjustImageProportions(galImg);
 		});
 	}
