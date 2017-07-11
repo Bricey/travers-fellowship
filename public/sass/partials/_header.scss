@@ -133,8 +133,9 @@ header {
           height: auto;
         }
         &:after {
-          content: 'Profiles';
+          content: 'Voices';
           margin-left: 7px;
+          color: $red;
 
           @include for-size(phone-only) {
               display: none;
