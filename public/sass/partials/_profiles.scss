@@ -88,7 +88,7 @@
 			left: 0; top:0;
 			p.photo-caption {
 				position: absolute;
-				margin: 0 15px 6px 0;
+				margin: 0 0 6px 0;
 				letter-spacing: 0.06rem;
 				bottom: 0;
 				right: 0;
@@ -99,7 +99,7 @@
 				text-shadow:0 2px rgba(0,0,0,0.8);
 
 				@include for-size(phone-only) {
-					top: 55px;
+					//top: 58px;
 					font-size:0.9rem;
 				}
 			}
@@ -123,12 +123,15 @@
 			&.abid {
 				background-image: url(../images/art/bg-abid.jpg);
 			}
+			@include for-size(phone-only) {
+				background-position: 50% -30%;
+			}
 			.text {
 				overflow: hidden;
 				padding: 100px 0 0 15px;
 				width: 70% !important;
 				.introParagraph {
-					padding: 20px 0 20px 15px;
+					padding: 20px 15px 20px 15px;
 					width:80%;
 					background-color: rgba(0,0,0,0.8);
 					border-top: 3px solid $lightgrey;
@@ -174,7 +177,14 @@
 						display: block;
 						color: $lightgrey;
 					}
-					
+				@include for-size(phone-only) {
+					padding-right: 20px;
+					width: 100%;
+				}
+				@include for-size(full-width-up) {
+					width: 70% !important;
+				}		
+
 				}
 
 				&.bg-gradient {
@@ -189,13 +199,14 @@
 
 					p, *:not(span) {
 						text-shadow: 0 0 2px rgba(0,0,0,0.6);
-						width: 70%;
+						width: 100%;
 					}
 				}
 				@include for-size(full-width-down) {
-					width: 95% !important;
+					width: 100% !important;
 				}
 				@include for-size(phone-only) {
+					width: 100%;
 					.introParagraph {
 						width: 100%;
 						h1 {
@@ -213,9 +224,9 @@
 						background: -moz-linear-gradient(left, rgba(0,0,0,0.85) 40%, rgba(0,0,0,0) 100%);
 						background: -webkit-linear-gradient(left, rgba(0,0,0,0.85) 40%,rgba(0,0,0,0) 100%);
 						background: linear-gradient(to right, rgba(0,0,0,0.85) 40%,rgba(0,0,0,0) 100%);
-						p,*:not(span) {
-							width: 90%;
-						}
+						// p,*:not(span) {
+						// 	width: 100%;
+						// }
 					}
 				}
 			}

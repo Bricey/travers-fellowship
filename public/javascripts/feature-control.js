@@ -109,6 +109,11 @@ $(document).ready(function() {
 	var value = $(window).scrollTop();
 	$(progress).attr('value', value);
 
+	// check whether browser is at 600 or more upon load
+	if ($(window).scrollTop <=600) {
+		$('.hed-img').css('opacity',0);
+	}
+
 	$(document).on('scroll', function() {
 	  value = $(window).scrollTop();
 	  progress.attr('value', value);

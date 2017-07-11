@@ -1146,7 +1146,7 @@ p b {
       top: 0; }
       #profiles article #intro p.photo-caption {
         position: absolute;
-        margin: 0 15px 6px 0;
+        margin: 0 0 6px 0;
         letter-spacing: 0.06rem;
         bottom: 0;
         right: 0;
@@ -1157,7 +1157,6 @@ p b {
         text-shadow: 0 2px rgba(0, 0, 0, 0.8); }
         @media (max-width: 599px) {
           #profiles article #intro p.photo-caption {
-            top: 55px;
             font-size: 0.9rem; } }
       @media (max-width: 599px) {
         #profiles article #intro .more-icon {
@@ -1172,12 +1171,15 @@ p b {
         background-image: url(c4c0002ec8675fa764206e5eea6e9eff.jpg); }
       #profiles article #intro.abid {
         background-image: url(9c3570ae37ea43b75c1dab98daf39f40.jpg); }
+      @media (max-width: 599px) {
+        #profiles article #intro {
+          background-position: 50% -30%; } }
       #profiles article #intro .text {
         overflow: hidden;
         padding: 100px 0 0 15px;
         width: 70% !important; }
         #profiles article #intro .text .introParagraph {
-          padding: 20px 0 20px 15px;
+          padding: 20px 15px 20px 15px;
           width: 80%;
           background-color: rgba(0, 0, 0, 0.8);
           border-top: 3px solid #cccdcd;
@@ -1219,6 +1221,13 @@ p b {
             margin-top: 30px;
             display: block;
             color: #cccdcd; }
+          @media (max-width: 599px) {
+            #profiles article #intro .text .introParagraph {
+              padding-right: 20px;
+              width: 100%; } }
+          @media (min-width: 940px) {
+            #profiles article #intro .text .introParagraph {
+              width: 70% !important; } }
         #profiles article #intro .text.bg-gradient {
           position: absolute;
           left: 0;
@@ -1229,24 +1238,24 @@ p b {
           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); }
           #profiles article #intro .text.bg-gradient p, #profiles article #intro .text.bg-gradient *:not(span) {
             text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-            width: 70%; }
+            width: 100%; }
         @media (max-width: 939px) {
           #profiles article #intro .text {
-            width: 95% !important; } }
+            width: 100% !important; } }
         @media (max-width: 599px) {
-          #profiles article #intro .text .introParagraph {
+          #profiles article #intro .text {
             width: 100%; }
-            #profiles article #intro .text .introParagraph h1 {
-              font-size: 4rem; }
-            #profiles article #intro .text .introParagraph h2 {
-              font-size: 1.3rem; }
-            #profiles article #intro .text .introParagraph p:last-child:after {
-              display: none; }
-          #profiles article #intro .text.bg-gradient {
-            width: 100%;
-            background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 40%, transparent 100%); }
-            #profiles article #intro .text.bg-gradient p, #profiles article #intro .text.bg-gradient *:not(span) {
-              width: 90%; } }
+            #profiles article #intro .text .introParagraph {
+              width: 100%; }
+              #profiles article #intro .text .introParagraph h1 {
+                font-size: 4rem; }
+              #profiles article #intro .text .introParagraph h2 {
+                font-size: 1.3rem; }
+              #profiles article #intro .text .introParagraph p:last-child:after {
+                display: none; }
+            #profiles article #intro .text.bg-gradient {
+              width: 100%;
+              background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 40%, transparent 100%); } }
     #profiles article footer {
       height: 220px;
       width: 100%;

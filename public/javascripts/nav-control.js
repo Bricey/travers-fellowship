@@ -22,7 +22,6 @@ $(document).ready(function() {
 
 	// check if ios for background:cover fix
 	if (iOS()) {
-		alert('true');
 		$('.bgFallback').show();
 		$('#intro').css('background-attachment','scroll');
 	} else {
