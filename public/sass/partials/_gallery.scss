@@ -3,16 +3,18 @@
 	height: 100%;
 	display: flex;
 	justify-content: center;
-	align-content: center;
+	align-items: center;
 
 	.gal-cont {
 		max-width: 800px;
 		width: 100%;
 		height: 100%;
 		display: flex;
+		
 		flex-direction: column;
 		justify-content: center;
-		align-content: center;
+		align-items: center;
+		flex-flow: center;
 
 		&.url {
 			.gal-nav {
@@ -63,6 +65,7 @@
 			color: #fff;
 			background-color: $black;
 			padding: 0 15px 15px 15px;
+			width: 100%;
 
 			p {
 				font-family: 'BentonSansCond-Regular',sans-serif;

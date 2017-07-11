@@ -10,18 +10,11 @@ $(document).ready(function() {
 	var galleryObj = {
 		"gal-drawings" : {
 			name: 'drawing',
-			captions: [
-				['XXX0'],
-				['XXX1'],
-				['XXX2'],
-				['XXX3'],
-				['XXX4'],
-				['XXX5']
-			]
+			captions: 'Drawings made by refugee children in Gaziantep, Turkey'
 		},
 		"url-zaatari" : {
 			url: "https://www.google.com/maps/embed?pb=!1m0!4v1498162611152!6m8!1m7!1sF%3A-ZOCZdG37nhY%2FWOkVtTmxhJI%2FAAAAAAAAABQ%2FHl5xGJsoqXsCTIyFruE0PmAUk-MjN1aogCLIB!2m2!1d32.2858696!2d36.3356418!3f47.799609088037954!4f3.355989764901338!5f0.7820865974627469",
-			caption: "Za'atari refugee camp in Jordan."
+			caption: "Zata'ari refugee camp in Jordan."
 		}
 	}
 
@@ -76,6 +69,7 @@ $(document).ready(function() {
 		var gal = galleryObj[d];
 		$('.gal-cont').addClass('url gal-fw');
 		$('.gal-ft').append(galUrl);
+		$('.gal-caption p').text(gal.caption)
 	}
 
 	function launchGallery(d) {
@@ -111,7 +105,7 @@ $(document).ready(function() {
 
 	// check whether browser is at 600 or more upon load
 	if ($(window).scrollTop <=400) {
-		$('.bgFallback').css('opacity',0);
+		//$('.bgFallback').css('opacity',0);
 		$('.hed-img').css('opacity',0);
 	}
 
@@ -121,7 +115,7 @@ $(document).ready(function() {
 	  var min = 0,max=300;
 	  if (value > min && value <= max) {
 	  	$('.hed-img').css('opacity',(value-max)/(min-max));
-	  	$('.bgFallback').css('opacity',(value-max)/(min-max));
+	  	//$('.bgFallback').css('opacity',(value-max)/(min-max));
 	  }
 	  if (value == 0) {
 	  	$('.hed-img').css('opacity',1);
