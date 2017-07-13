@@ -76,20 +76,24 @@ $(document).ready(function() {
 		galImg = $('<img>').attr('alt','gallery image');
 		$('.gal-ft').append(galImg);
 		var gal = galleryObj[d];
-		var totalImages = gal.captions.length-1;
+		var totalImages = 5;
 		var currentSlide = 0;
 		galImg.attr('src','/images/art/'+d+"/"+gal.name+currentSlide+".jpg");
 
 		$('.back').on('click',function() {
-			if (currentSlide > 0) currentSlide--;
-			galImg.attr('src','/images/art/'+d+"/"+gal.name+currentSlide+".jpg");
-			adjustImageProportions(galImg);
+			if (currentSlide > 0) {
+				currentSlide--;
+				galImg.attr('src','/images/art/'+d+"/"+gal.name+currentSlide+".jpg");
+				adjustImageProportions(galImg);
+			}
 		});
 
 		$('.next').on('click',function() {
-			if (currentSlide < totalImages) currentSlide++;
-			galImg.attr('src','/images/art/'+d+"/"+gal.name+currentSlide+".jpg");
-			adjustImageProportions(galImg);
+			if (currentSlide < totalImages) {
+				currentSlide++;
+				galImg.attr('src','/images/art/'+d+"/"+gal.name+currentSlide+".jpg");
+				adjustImageProportions(galImg);
+			}
 		});
 	}
 
